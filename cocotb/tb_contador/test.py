@@ -35,22 +35,12 @@ async def test_contador(dut):
     # Inicialización
     # reset es ACTIVO EN BAJO
     # ---------------------------------------------------------
+    dut.clk.value = 0
+    dut.rst.value = 0
+    dut.enable.value = 0
+    dut.suma_resta.value = 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    await Timer(1, unit="ns")
 
     cocotb.start_soon(
         Clock(dut.clk, CLK_PERIOD_NS, unit="ns").start(start_high=False)
@@ -62,17 +52,8 @@ async def test_contador(dut):
     await comprobar_salida(dut, 0, "RESET ciclo 1")
     await comprobar_salida(dut, 0, "RESET ciclo 2")
 
-
-
-
     # Liberar reset
-    
-    
-    
-    
-    
-    
-    
+    dut.rst.value = 1
 
     # ---------------------------------------------------------
     # ENABLE = 0 -> mantener valor
@@ -94,26 +75,14 @@ async def test_contador(dut):
     dut._log.info("---- CONTEO ASCENDENTE ----")
 
     for esperado in range(1, 16):
-        # hacer que cuente con la funcion comprobar_salida, que vaya comparando con esperado
-
-        
-
-
-
-
+        await comprobar_salida(dut, esperado, "SUMA")
 
     # 1111 + 0001 -> 0000
-    #sumarle un 1 para que llegue a 0
-    
-
-
-
-
-
-
-
-
-
+    await comprobar_salida(
+        dut,
+        0,
+        "SUMA con overflow"
+    )
 
     # ---------------------------------------------------------
     # CONTEO DESCENDENTE
@@ -124,18 +93,7 @@ async def test_contador(dut):
     dut._log.info("---- CONTEO DESCENDENTE ----")
 
     for esperado in range(15, -1, -1):
-
-        #que cuente de manera decendente y haga la comparación con esperado
-        
-
-
-
-
-
-
-
-
-
+        await comprobar_salida(dut, esperado, "RESTA")
 
     # ---------------------------------------------------------
     # ENABLE = 0 -> HOLD
@@ -143,18 +101,12 @@ async def test_contador(dut):
     dut.enable.value = 0
 
     for i in range(3):
-        #que intente contar y al no poder contar por enable=0 siempre tiene que esperar un 0
-        
-        
+        await comprobar_salida(
+            dut,
+            0,
+            f"HOLD ciclo {i + 1}"
+        )
 
-
-
-
-
-
-
-
-        
     # ---------------------------------------------------------
     # Volver a contar antes del reset final
     # ---------------------------------------------------------

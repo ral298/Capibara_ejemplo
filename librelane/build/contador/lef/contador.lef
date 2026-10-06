@@ -1,0 +1,202 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO contador
+  CLASS BLOCK ;
+  FOREIGN contador ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 100.000 BY 100.000 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT -1.280 7.680 0.720 90.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 98.960 7.680 100.960 90.320 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -1.280 7.680 100.960 9.680 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -1.280 88.320 100.960 90.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 22.040 4.680 24.040 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 42.040 4.680 44.040 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 62.040 4.680 64.040 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 82.040 4.680 84.040 93.320 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 31.330 103.960 33.330 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 51.330 103.960 53.330 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 71.330 103.960 73.330 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT -4.280 4.680 -2.280 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 101.960 4.680 103.960 93.320 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 4.680 103.960 6.680 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 91.320 103.960 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 26.040 4.680 28.040 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 46.040 4.680 48.040 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 66.040 4.680 68.040 93.320 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 86.040 4.680 88.040 93.320 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 35.330 103.960 37.330 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 55.330 103.960 57.330 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT -4.280 75.330 103.960 77.330 ;
+    END
+  END VSS
+  PIN enable
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 24.570 0.000 25.270 2.000 ;
+    END
+  END enable
+  PIN reloj
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 49.210 2.000 49.910 ;
+    END
+  END reloj
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 98.000 49.210 100.000 49.910 ;
+    END
+  END reset
+  PIN resultado[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 12.250 98.000 12.950 100.000 ;
+    END
+  END resultado[0]
+  PIN resultado[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 36.890 98.000 37.590 100.000 ;
+    END
+  END resultado[1]
+  PIN resultado[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 61.530 98.000 62.230 100.000 ;
+    END
+  END resultado[2]
+  PIN resultado[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 86.170 98.000 86.870 100.000 ;
+    END
+  END resultado[3]
+  PIN suma_resta
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 73.850 0.000 74.550 2.000 ;
+    END
+  END suma_resta
+  OBS
+      LAYER Nwell ;
+        RECT 6.290 15.250 93.390 82.750 ;
+      LAYER Metal1 ;
+        RECT 6.720 15.380 92.960 82.620 ;
+      LAYER Metal2 ;
+        RECT 8.260 97.700 11.950 98.000 ;
+        RECT 13.250 97.700 36.590 98.000 ;
+        RECT 37.890 97.700 61.230 98.000 ;
+        RECT 62.530 97.700 85.870 98.000 ;
+        RECT 87.170 97.700 91.700 98.000 ;
+        RECT 8.260 2.300 91.700 97.700 ;
+        RECT 8.260 2.000 24.270 2.300 ;
+        RECT 25.570 2.000 73.550 2.300 ;
+        RECT 74.850 2.000 91.700 2.300 ;
+      LAYER Metal3 ;
+        RECT 2.000 50.210 98.000 82.460 ;
+        RECT 2.300 48.910 97.700 50.210 ;
+        RECT 2.000 15.540 98.000 48.910 ;
+      LAYER Metal4 ;
+        RECT 31.500 74.570 31.780 77.750 ;
+  END
+END contador
+END LIBRARY
+
