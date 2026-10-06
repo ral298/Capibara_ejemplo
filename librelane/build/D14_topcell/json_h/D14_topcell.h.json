@@ -1,0 +1,426 @@
+{
+  "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+  "modules": {
+    "D14_topcell": {
+      "attributes": {
+        "hdlname": "D14_topcell",
+        "top": "00000000000000000000000000000001",
+        "src": "/foss/designs/libs/snn_analog/D14_topcell.v:2.1-123.10"
+      },
+      "ports": {
+        "Vin": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "Vin_neg": {
+          "direction": "inout",
+          "bits": [ 3 ]
+        },
+        "vw11": {
+          "direction": "inout",
+          "bits": [ 4 ]
+        },
+        "vw42": {
+          "direction": "inout",
+          "bits": [ 5 ]
+        },
+        "vpre1": {
+          "direction": "inout",
+          "bits": [ 6 ]
+        },
+        "vpre2": {
+          "direction": "inout",
+          "bits": [ 7 ]
+        },
+        "vpost1": {
+          "direction": "inout",
+          "bits": [ 8 ]
+        },
+        "vpost2": {
+          "direction": "inout",
+          "bits": [ 9 ]
+        },
+        "avdd": {
+          "direction": "inout",
+          "bits": [ 10 ]
+        },
+        "avss": {
+          "direction": "inout",
+          "bits": [ 11 ]
+        }
+      },
+      "cells": {
+        "u_current_mirror": {
+          "hide_name": 0,
+          "type": "current_mirror",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:116.20-119.6"
+          },
+          "port_directions": {
+            "A": "output",
+            "B": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 13 ]
+          }
+        },
+        "u_encoder": {
+          "hide_name": 0,
+          "type": "encoder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:52.13-61.6"
+          },
+          "port_directions": {
+            "Iex_1_i": "output",
+            "Iex_2_i": "output",
+            "Iex_3_i": "output",
+            "Iex_4_i": "output",
+            "Vin": "input",
+            "Vin_neg": "input",
+            "vdd": "inout",
+            "vss": "inout"
+          },
+          "connections": {
+            "Iex_1_i": [ 14 ],
+            "Iex_2_i": [ 15 ],
+            "Iex_3_i": [ 16 ],
+            "Iex_4_i": [ 17 ],
+            "Vin": [ 2 ],
+            "Vin_neg": [ 3 ],
+            "vdd": [ 10 ],
+            "vss": [ 11 ]
+          }
+        },
+        "u_layer_input": {
+          "hide_name": 0,
+          "type": "layer_input",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:64.17-79.6"
+          },
+          "port_directions": {
+            "Iext1": "inout",
+            "Iext2": "inout",
+            "Iext3": "inout",
+            "Iext4": "inout",
+            "nvout_1": "inout",
+            "nvout_2": "inout",
+            "nvout_3": "inout",
+            "nvout_4": "inout",
+            "vdd": "inout",
+            "vout_1": "inout",
+            "vout_2": "inout",
+            "vout_3": "inout",
+            "vout_4": "inout",
+            "vss": "inout"
+          },
+          "connections": {
+            "Iext1": [ 14 ],
+            "Iext2": [ 15 ],
+            "Iext3": [ 16 ],
+            "Iext4": [ 17 ],
+            "nvout_1": [ 18 ],
+            "nvout_2": [ 19 ],
+            "nvout_3": [ 20 ],
+            "nvout_4": [ 21 ],
+            "vdd": [ 10 ],
+            "vout_1": [ 6 ],
+            "vout_2": [ 7 ],
+            "vout_3": [ 22 ],
+            "vout_4": [ 23 ],
+            "vss": [ 11 ]
+          }
+        },
+        "u_layer_output": {
+          "hide_name": 0,
+          "type": "layer_output",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:105.18-112.6"
+          },
+          "port_directions": {
+            "Iext1": "inout",
+            "Iext2": "inout",
+            "nvout_1": "inout",
+            "nvout_2": "inout",
+            "vout_1": "inout",
+            "vout_2": "inout"
+          },
+          "connections": {
+            "Iext1": [ 24 ],
+            "Iext2": [ 25 ],
+            "nvout_1": [ 26 ],
+            "nvout_2": [ 27 ],
+            "vout_1": [ 8 ],
+            "vout_2": [ 9 ]
+          }
+        },
+        "u_stdp_4x2": {
+          "hide_name": 0,
+          "type": "stdp_4x2",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:81.14-102.6"
+          },
+          "port_directions": {
+            "A": "inout",
+            "B": "inout",
+            "avdd": "inout",
+            "avss": "inout",
+            "ifwd1": "inout",
+            "ifwd2": "inout",
+            "nvpost1": "inout",
+            "nvpost2": "inout",
+            "nvpre1": "inout",
+            "nvpre2": "inout",
+            "nvpre3": "inout",
+            "nvpre4": "inout",
+            "vpost1": "inout",
+            "vpost2": "inout",
+            "vpre1": "inout",
+            "vpre2": "inout",
+            "vpre3": "inout",
+            "vpre4": "inout",
+            "vw11": "inout",
+            "vw42": "inout"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 13 ],
+            "avdd": [ 10 ],
+            "avss": [ 11 ],
+            "ifwd1": [ 24 ],
+            "ifwd2": [ 25 ],
+            "nvpost1": [ 26 ],
+            "nvpost2": [ 27 ],
+            "nvpre1": [ 18 ],
+            "nvpre2": [ 19 ],
+            "nvpre3": [ 20 ],
+            "nvpre4": [ 21 ],
+            "vpost1": [ 8 ],
+            "vpost2": [ 9 ],
+            "vpre1": [ 6 ],
+            "vpre2": [ 7 ],
+            "vpre3": [ 22 ],
+            "vpre4": [ 23 ],
+            "vw11": [ 4 ],
+            "vw42": [ 5 ]
+          }
+        }
+      },
+      "netnames": {
+        "A_wire": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:43.10-43.16",
+            "unused_bits": "0 "
+          }
+        },
+        "B_wire": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:44.10-44.16",
+            "unused_bits": "0 "
+          }
+        },
+        "Vin": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:4.11-4.14"
+          }
+        },
+        "Vin_neg": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:5.11-5.18"
+          }
+        },
+        "avdd": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:18.11-18.15"
+          }
+        },
+        "avss": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:19.11-19.15"
+          }
+        },
+        "ifwd1_net": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:39.10-39.19",
+            "unused_bits": "0 "
+          }
+        },
+        "ifwd2_net": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:40.10-40.19",
+            "unused_bits": "0 "
+          }
+        },
+        "net3": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:23.10-23.14",
+            "unused_bits": "0 "
+          }
+        },
+        "net4": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:24.10-24.14",
+            "unused_bits": "0 "
+          }
+        },
+        "net5": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:25.10-25.14",
+            "unused_bits": "0 "
+          }
+        },
+        "net6": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:26.10-26.14",
+            "unused_bits": "0 "
+          }
+        },
+        "nvpost1_net": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:36.10-36.21",
+            "unused_bits": "0 "
+          }
+        },
+        "nvpost2_net": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:38.10-38.21",
+            "unused_bits": "0 "
+          }
+        },
+        "nvpre1_int": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:29.21-29.31",
+            "unused_bits": "0 "
+          }
+        },
+        "nvpre2_int": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:30.21-30.31",
+            "unused_bits": "0 "
+          }
+        },
+        "nvpre3_int": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:31.21-31.31",
+            "unused_bits": "0 "
+          }
+        },
+        "nvpre4_int": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:32.21-32.31",
+            "unused_bits": "0 "
+          }
+        },
+        "vpost1": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:13.11-13.17"
+          }
+        },
+        "vpost2": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:14.11-14.17"
+          }
+        },
+        "vpre1": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:11.11-11.16"
+          }
+        },
+        "vpre2": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:12.11-12.16"
+          }
+        },
+        "vpre3_int": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:31.10-31.19",
+            "unused_bits": "0 "
+          }
+        },
+        "vpre4_int": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:32.10-32.19",
+            "unused_bits": "0 "
+          }
+        },
+        "vw11": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:9.11-9.15"
+          }
+        },
+        "vw42": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/foss/designs/libs/snn_analog/D14_topcell.v:10.11-10.15"
+          }
+        }
+      }
+    }
+  }
+}

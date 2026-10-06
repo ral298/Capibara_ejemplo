@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1790706675" />
+    <testcase name="test_contador" classname="test" file="/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/test.py" lineno="31" time="0.007275581359863281" sim_time_ns="452.0" ratio_time="62125.61960938524" />
+  </testsuite>
+</testsuites>

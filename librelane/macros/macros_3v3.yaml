@@ -14,7 +14,6 @@ MACROS:
       qrcode_id:
         location: [26, 26]
         orientation: N
-
   # required: will be replaced with actual content
   gf180mcu_ws_ip__shuttle_id:
     gds:
@@ -79,31 +78,230 @@ MACROS:
         orientation: N
 
   # 3.3V SRAM
-  gf180mcu_ocd_ip_sram__sram512x8m8wm1:
+  #gf180mcu_ocd_ip_sram__sram512x8m8wm1:
+  #  gds:
+  #    - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/gds/gf180mcu_ocd_ip_sram__sram512x8m8wm1.gds
+  #  lef:
+  #    - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lef/gf180mcu_ocd_ip_sram__sram512x8m8wm1.lef
+  #  vh:
+  #    - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/verilog/gf180mcu_ocd_ip_sram__sram512x8m8wm1__blackbox_pp.v
+  #  lib:
+  #    "*_tt_025C_3v30":
+  #      - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lib/gf180mcu_ocd_ip_sram__sram512x8m8wm1__tt_025C_3v30.lib
+  #    "*_ff_n40C_3v60":
+  #      - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lib/gf180mcu_ocd_ip_sram__sram512x8m8wm1__ff_n40C_3v60.lib
+  #    "*_ss_125C_3v00":
+  #      - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lib/gf180mcu_ocd_ip_sram__sram512x8m8wm1__ss_125C_3v00.lib
+  #  instances:
+  #    # Make sure to specify the SRAMs in pdn_cfg.tcl
+  #    i_chip_core.sram_0:
+  #      location: [490, 500]
+  #      orientation: N
+  #    i_chip_core.sram_1:
+  #      location: [970, 500]
+  #      orientation: E
+  ipn_logo:
     gds:
-      - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/gds/gf180mcu_ocd_ip_sram__sram512x8m8wm1.gds
+      - dir::build/ipn_logo/ipn_logo.gds
     lef:
-      - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lef/gf180mcu_ocd_ip_sram__sram512x8m8wm1.lef
+      - dir::build/ipn_logo/ipn_logo.lef
     vh:
-      - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/verilog/gf180mcu_ocd_ip_sram__sram512x8m8wm1__blackbox_pp.v
+      - dir::build/ipn_logo/ipn_logo.v
     lib:
-      "*_tt_025C_3v30":
-        - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lib/gf180mcu_ocd_ip_sram__sram512x8m8wm1__tt_025C_3v30.lib
-      "*_ff_n40C_3v60":
-        - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lib/gf180mcu_ocd_ip_sram__sram512x8m8wm1__ff_n40C_3v60.lib
-      "*_ss_125C_3v00":
-        - pdk_dir::libs.ref/gf180mcu_ocd_ip_sram/lib/gf180mcu_ocd_ip_sram__sram512x8m8wm1__ss_125C_3v00.lib
+      "*":
+        - dir::build/ipn_logo/ipn_logo.lib
     instances:
-      # Make sure to specify the SRAMs in pdn_cfg.tcl
-      i_chip_core.sram_0:
-        location: [490, 500]
+      ipn_logo_u:
+        location: [2980, 925]
         orientation: N
-      i_chip_core.sram_1:
-        location: [970, 500]
-        orientation: E
-
+  cic:
+    gds:
+      - dir::build/cic/cic.gds
+    lef:
+      - dir::build/cic/cic.lef
+    vh:
+      - dir::build/cic/cic.vh
+    lib:
+      "*":
+        - dir::build/cic/cic.lib
+    instances:
+      cic_u:
+        location: [3320, 1105]
+        orientation: N
+#  capibara:
+#    gds:
+#      - dir::build/capibara/capibara.gds
+#    lef:
+#      - dir::build/capibara/capibara.lef
+#    vh:
+#      - dir::build/capibara/capibara.vh
+#    lib:
+#      "*":
+#        - dir::build/capibara/capibara.lib
+#    instances:
+#      capibara_u:
+#        location: [3320, 925]
+#        orientation: N
+  contador:
+    gds:
+      - dir::build/contador/gds/contador.gds
+    lef:
+      - dir::build/contador/lef/contador.lef
+    vh:
+      - dir::build/contador/vh/contador.vh
+    nl:
+      - dir::build/contador/nl/contador.nl.v
+    pnl:
+      - dir::build/contador/pnl/contador.pnl.v
+    spice:
+      - dir::build/contador/spice/contador.spice
+    sdf:
+      max_ff_n40C_3v60:
+        - dir::build/contador/sdf/max_ff_n40C_3v60/contador__max_ff_n40C_3v60.sdf
+      max_ss_125C_3v00:
+        - dir::build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf
+      max_tt_025C_3v30:
+        - dir::build/contador/sdf/max_tt_025C_3v30/contador__max_tt_025C_3v30.sdf
+      min_ff_n40C_3v60:
+        - dir::build/contador/sdf/min_ff_n40C_3v60/contador__min_ff_n40C_3v60.sdf
+      min_ss_125C_3v00:
+        - dir::build/contador/sdf/min_ss_125C_3v00/contador__min_ss_125C_3v00.sdf
+      min_tt_025C_3v30:
+        - dir::build/contador/sdf/min_tt_025C_3v30/contador__min_tt_025C_3v30.sdf
+      nom_ff_n40C_3v60:
+        - dir::build/contador/sdf/nom_ff_n40C_3v60/contador__nom_ff_n40C_3v60.sdf
+      nom_ss_125C_3v00:
+        - dir::build/contador/sdf/nom_ss_125C_3v00/contador__nom_ss_125C_3v00.sdf
+      nom_tt_025C_3v30:
+        - dir::build/contador/sdf/nom_tt_025C_3v30/contador__nom_tt_025C_3v30.sdf
+    lib:
+      max_ff_n40C_3v60:
+        - dir::build/contador/lib/max_ff_n40C_3v60/contador__max_ff_n40C_3v60.lib
+      max_ss_125C_3v00:
+        - dir::build/contador/lib/max_ss_125C_3v00/contador__max_ss_125C_3v00.lib
+      max_tt_025C_3v30:
+        - dir::build/contador/lib/max_tt_025C_3v30/contador__max_tt_025C_3v30.lib
+      min_ff_n40C_3v60:
+        - dir::build/contador/lib/min_ff_n40C_3v60/contador__min_ff_n40C_3v60.lib
+      min_ss_125C_3v00:
+        - dir::build/contador/lib/min_ss_125C_3v00/contador__min_ss_125C_3v00.lib
+      min_tt_025C_3v30:
+        - dir::build/contador/lib/min_tt_025C_3v30/contador__min_tt_025C_3v30.lib
+      nom_ff_n40C_3v60:
+        - dir::build/contador/lib/nom_ff_n40C_3v60/contador__nom_ff_n40C_3v60.lib
+      nom_ss_125C_3v00:
+        - dir::build/contador/lib/nom_ss_125C_3v00/contador__nom_ss_125C_3v00.lib
+      nom_tt_025C_3v30:
+        - dir::build/contador/lib/nom_tt_025C_3v30/contador__nom_tt_025C_3v30.lib
+    spef:
+      max:
+        - dir::build/contador/spef/max/contador.max.spef
+      min:
+        - dir::build/contador/spef/min/contador.min.spef
+      nom:
+        - dir::build/contador/spef/nom/contador.nom.spef
+    instances:
+      i_chip_core.contador_u:
+        location: [550, 550]
+        orientation: N
+#  D14_topcell:
+#    gds:
+#      - dir::build/D14_topcell/gds/D14_topcell.gds
+#    lef:
+#      - dir::build/D14_topcell/lef/D14_topcell.lef
+#    vh:
+#      - dir::build/D14_topcell/vh/D14_topcell.vh
+#    nl:
+#      - dir::build/D14_topcell/nl/D14_topcell.nl.v
+#    pnl:
+#      - dir::build/D14_topcell/pnl/D14_topcell.pnl.v
+#    spice:
+#      - dir::build/D14_topcell/spice/D14_topcell.spice
+#    sdf:
+#      max_ff_n40C_5v50:
+#        - dir::build/D14_topcell/sdf/max_ff_n40C_5v50/D14_topcell__max_ff_n40C_5v50.sdf
+#      max_ss_125C_4v50:
+#        - dir::build/D14_topcell/sdf/max_ss_125C_4v50/D14_topcell__max_ss_125C_4v50.sdf
+#      max_tt_025C_5v00:
+#        - dir::build/D14_topcell/sdf/max_tt_025C_5v00/D14_topcell__max_tt_025C_5v00.sdf
+#      min_ff_n40C_5v50:
+#        - dir::build/D14_topcell/sdf/min_ff_n40C_5v50/D14_topcell__min_ff_n40C_5v50.sdf
+#      min_ss_125C_4v50:
+#        - dir::build/D14_topcell/sdf/min_ss_125C_4v50/D14_topcell__min_ss_125C_4v50.sdf
+#      min_tt_025C_5v00:
+#        - dir::build/D14_topcell/sdf/min_tt_025C_5v00/D14_topcell__min_tt_025C_5v00.sdf
+#      nom_ff_n40C_5v50:
+#        - dir::build/D14_topcell/sdf/nom_ff_n40C_5v50/D14_topcell__nom_ff_n40C_5v50.sdf
+#      nom_ss_125C_4v50:
+#        - dir::build/D14_topcell/sdf/nom_ss_125C_4v50/D14_topcell__nom_ss_125C_4v50.sdf
+#      nom_tt_025C_5v00:
+#        - dir::build/D14_topcell/sdf/nom_tt_025C_5v00/D14_topcell__nom_tt_025C_5v00.sdf
+#    lib:
+#      max_ff_n40C_5v50:
+#        - dir::build/D14_topcell/lib/max_ff_n40C_5v50/D14_topcell__max_ff_n40C_5v50.lib
+#      max_ss_125C_4v50:
+#        - dir::build/D14_topcell/lib/max_ss_125C_4v50/D14_topcell__max_ss_125C_4v50.lib
+#      max_tt_025C_5v00:
+#        - dir::build/D14_topcell/lib/max_tt_025C_5v00/D14_topcell__max_tt_025C_5v00.lib
+#      min_ff_n40C_5v50:
+#        - dir::build/D14_topcell/lib/min_ff_n40C_5v50/D14_topcell__min_ff_n40C_5v50.lib
+#      min_ss_125C_4v50:
+#        - dir::build/D14_topcell/lib/min_ss_125C_4v50/D14_topcell__min_ss_125C_4v50.lib
+#      min_tt_025C_5v00:
+#        - dir::build/D14_topcell/lib/min_tt_025C_5v00/D14_topcell__min_tt_025C_5v00.lib
+#      nom_ff_n40C_5v50:
+#        - dir::build/D14_topcell/lib/nom_ff_n40C_5v50/D14_topcell__nom_ff_n40C_5v50.lib
+#      nom_ss_125C_4v50:
+#        - dir::build/D14_topcell/lib/nom_ss_125C_4v50/D14_topcell__nom_ss_125C_4v50.lib
+#      nom_tt_025C_5v00:
+#        - dir::build/D14_topcell/lib/nom_tt_025C_5v00/D14_topcell__nom_tt_025C_5v00.lib
+#    spef:
+#      max:
+#        - dir::build/D14_topcell/spef/max/D14_topcell.max.spef
+#      min:
+#        - dir::build/D14_topcell/spef/min/D14_topcell.min.spef
+#      nom:
+#        - dir::build/D14_topcell/spef/nom/D14_topcell.nom.spef
+#    instances:
+#      i_chip_core.D14_topcell_u:
+#        location: [3000, 490]
+#        orientation: N
+#  analog_connect:
+#    gds:
+#      - dir::../ip/analog_connect/analog_connect.gds
+#    lef:
+#      - dir::../ip/analog_connect/analog_connect.lef
+#    vh:
+#      - dir::../ip/analog_connect/analog_connect.vh
+#    instances:
+#      analog[0].connect:
+#        location: [3555.0, 749.84]
+#        orientation: W
+#      analog[8].connect:
+#        location: [3427.34,2154.0]
+#        orientation: S
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:
-- "i_chip_core.sram_0 VDD VSS VDD VSS"
-- "i_chip_core.sram_1 VDD VSS VDD VSS"
+#- "i_chip_core.sram_0 VDD VSS VDD VSS"
+#- "i_chip_core.sram_1 VDD VSS VDD VSS"
+- "i_chip_core.contador_u VDD VSS VDD VSS"
+#- "i_chip_core.D14_topcell_u VDD VSS avdd avss"
+
+
+#RSZ_DONT_TOUCH_LIST:
+#  - "i_chip_core.D14_topcell_u"
+#  - "analog_CORE[0]"
+#  - "analog_CORE[1]"
+#  - "analog_CORE[2]"
+#  - "analog_CORE[3]"
+#  - "analog_CORE[4]"
+#  - "analog_CORE[5]"
+#  - "analog_CORE[6]"
+#  - "analog_CORE[7]"
+
+#FP_OBSTRUCTIONS:
+#  - [2895, 545, 3350, 1000]
+
+FP_MACRO_HORIZONTAL_HALO: 5
+FP_MACRO_VERTICAL_HALO: 5

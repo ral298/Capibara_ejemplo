@@ -1,0 +1,423 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "D14_topcell"
+*DATE "00:54:56 Friday September 25, 2026"
+*VENDOR "The OpenROAD Project"
+*PROGRAM "OpenROAD"
+*VERSION "26Q1-1024-gdcf36133a"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*1 Vin
+*2 Vin_neg
+*5 vpost1
+*6 vpost2
+*7 vpre1
+*8 vpre2
+*9 vw11
+*10 vw42
+*13 A_wire
+*14 B_wire
+*15 ifwd1_net
+*16 ifwd2_net
+*17 net3
+*18 net4
+*19 net5
+*20 net6
+*21 nvpost1_net
+*22 nvpost2_net
+*23 nvpre1_int
+*24 nvpre2_int
+*25 nvpre3_int
+*26 nvpre4_int
+*27 vpre3_int
+*28 vpre4_int
+*29 u_current_mirror
+*30 u_encoder
+*31 u_layer_input
+*32 u_layer_output
+*33 u_stdp_4x2
+
+*PORTS
+Vin I
+Vin_neg I
+vpost1 I
+vpost2 I
+vpre1 I
+vpre2 I
+vw11 I
+vw42 I
+
+*D_NET *1 0.0397333
+*CONN
+*P Vin I
+*I *30:Vin I *D encoder
+*CAP
+1 Vin 8.66387e-05
+2 *30:Vin 0.00103039
+3 *1:10 0.0195696
+4 *1:8 0.0186258
+5 *30:Vin *30:Vin_neg 0.000108223
+6 *30:Vin *8:12 0.000104752
+7 *30:Vin *19:7 0.00020788
+*RES
+1 Vin *1:8 4.905 
+2 *1:8 *1:10 95.13 
+3 *1:10 *30:Vin 13.455 
+*END
+
+*D_NET *2 0.0211362
+*CONN
+*P Vin_neg I
+*I *30:Vin_neg I *D encoder
+*CAP
+1 Vin_neg 0.000535137
+2 *30:Vin_neg 0.00123303
+3 *2:10 0.0090199
+4 *2:8 0.008322
+5 *30:Vin_neg *30:Iex_4_i 0.000396692
+6 *30:Vin_neg *8:12 0.00152123
+7 *2:10 *30:Iex_1_i 0
+8 *2:10 *7:16 0
+9 *30:Vin *30:Vin_neg 0.000108223
+*RES
+1 Vin_neg *2:8 8.505 
+2 *2:8 *2:10 62.73 
+3 *2:10 *30:Vin_neg 28.98 
+*END
+
+*D_NET *5 0.0182882
+*CONN
+*P vpost1 I
+*I *33:vpost1 I *D stdp_4x2
+*I *32:vout_1 I *D layer_output
+*CAP
+1 vpost1 0.00339766
+2 *33:vpost1 0.00135949
+3 *32:vout_1 0.00759882
+4 *5:30 0.00556065
+5 *33:vpost1 *32:Iext1 0.000272917
+6 *5:30 *32:Iext1 9.86551e-05
+*RES
+1 vpost1 *32:vout_1 40.68 
+2 *32:vout_1 *5:30 44.595 
+3 *5:30 *33:vpost1 12.105 
+*END
+
+*D_NET *6 0.0200615
+*CONN
+*P vpost2 I
+*I *33:vpost2 I *D stdp_4x2
+*I *32:vout_2 I *D layer_output
+*CAP
+1 vpost2 0.00161247
+2 *33:vpost2 0.00453597
+3 *32:vout_2 0.00232673
+4 *6:13 0.00847517
+5 *32:vout_2 *32:nvout_1 0.00169993
+6 *32:vout_2 *21:18 0.000235483
+7 *32:vout_2 *22:30 0.000813463
+8 *33:vpost2 *22:30 0.000362315
+*RES
+1 vpost2 *6:13 20.52 
+2 *6:13 *32:vout_2 44.28 
+3 *6:13 *33:vpost2 45.495 
+*END
+
+*D_NET *7 0.0223496
+*CONN
+*P vpre1 I
+*I *33:vpre1 I *D stdp_4x2
+*I *31:vout_1 I *D layer_input
+*CAP
+1 vpre1 0.00282298
+2 *33:vpre1 0.00269508
+3 *31:vout_1 7.01328e-05
+4 *7:18 0.00673537
+5 *7:16 0.00679314
+6 *7:16 *30:Iex_1_i 0.00186723
+7 *7:16 *18:16 7.48621e-05
+8 *7:16 *20:7 0.00129076
+9 *2:10 *7:16 0
+*RES
+1 vpre1 *7:16 38.295 
+2 *7:16 *7:18 32.49 
+3 *7:18 *31:vout_1 0.585 
+4 *7:18 *33:vpre1 29.97 
+*END
+
+*D_NET *8 0.0194374
+*CONN
+*P vpre2 I
+*I *33:vpre2 I *D stdp_4x2
+*I *31:vout_2 I *D layer_input
+*CAP
+1 vpre2 0.00439652
+2 *33:vpre2 0.00153614
+3 *31:vout_2 0.00122835
+4 *8:14 0.00450917
+5 *8:12 0.00614121
+6 *30:Vin *8:12 0.000104752
+7 *30:Vin_neg *8:12 0.00152123
+*RES
+1 vpre2 *8:12 43.065 
+2 *8:12 *8:14 13.7604 
+3 *8:14 *31:vout_2 14.3196 
+4 *8:14 *33:vpre2 24.1528 
+*END
+
+*D_NET *9 0.00837845
+*CONN
+*P vw11 I
+*I *33:vw11 I *D stdp_4x2
+*CAP
+1 vw11 0.00418922
+2 *33:vw11 0.00418922
+*RES
+1 vw11 *33:vw11 43.2321 
+*END
+
+*D_NET *10 0.00476048
+*CONN
+*P vw42 I
+*I *33:vw42 I *D stdp_4x2
+*CAP
+1 vw42 0.00238024
+2 *33:vw42 0.00238024
+*RES
+1 vw42 *33:vw42 28.035 
+*END
+
+*D_NET *13 0.00603783
+*CONN
+*I *29:A I *D current_mirror
+*I *33:A I *D stdp_4x2
+*CAP
+1 *29:A 0.00301891
+2 *33:A 0.00301891
+*RES
+1 *33:A *29:A 29.43 
+*END
+
+*D_NET *14 0.00689541
+*CONN
+*I *29:B I *D current_mirror
+*I *33:B I *D stdp_4x2
+*CAP
+1 *29:B 0.0032128
+2 *33:B 0.0032128
+3 *29:B *31:nvout_4 0.000469807
+*RES
+1 *33:B *29:B 34.7111 
+*END
+
+*D_NET *15 0.00201686
+*CONN
+*I *32:Iext1 I *D layer_output
+*I *33:ifwd1 I *D stdp_4x2
+*CAP
+1 *32:Iext1 0.000822645
+2 *33:ifwd1 0.000822645
+3 *33:vpost1 *32:Iext1 0.000272917
+4 *5:30 *32:Iext1 9.86551e-05
+*RES
+1 *33:ifwd1 *32:Iext1 17.145 
+*END
+
+*D_NET *16 0.00443563
+*CONN
+*I *32:Iext2 I *D layer_output
+*I *33:ifwd2 I *D stdp_4x2
+*CAP
+1 *32:Iext2 0.00191997
+2 *33:ifwd2 0.00191997
+3 *32:Iext2 *21:18 0.000595689
+*RES
+1 *33:ifwd2 *32:Iext2 25.02 
+*END
+
+*D_NET *17 0.00934675
+*CONN
+*I *30:Iex_1_i I *D encoder
+*I *31:Iext1 I *D layer_input
+*CAP
+1 *30:Iex_1_i 0.00335153
+2 *31:Iext1 0.00335153
+3 *30:Iex_1_i *30:Iex_2_i 0.000170075
+4 *30:Iex_1_i *30:Iex_3_i 0.000470063
+5 *30:Iex_1_i *19:7 0
+6 *30:Iex_1_i *20:7 0.000136314
+7 *2:10 *30:Iex_1_i 0
+8 *7:16 *30:Iex_1_i 0.00186723
+*RES
+1 *31:Iext1 *30:Iex_1_i 38.43 
+*END
+
+*D_NET *18 0.0113595
+*CONN
+*I *30:Iex_2_i I *D encoder
+*I *31:Iext2 I *D layer_input
+*CAP
+1 *30:Iex_2_i 0.00378909
+2 *31:Iext2 0.000403294
+3 *18:16 0.00419239
+4 *30:Iex_2_i *19:7 0.00272672
+5 *18:16 *20:7 3.03444e-06
+6 *30:Iex_1_i *30:Iex_2_i 0.000170075
+7 *7:16 *18:16 7.48621e-05
+*RES
+1 *31:Iext2 *18:16 15.1682 
+2 *18:16 *30:Iex_2_i 42.6118 
+*END
+
+*D_NET *19 0.0285918
+*CONN
+*I *30:Iex_3_i I *D encoder
+*I *31:Iext3 I *D layer_input
+*CAP
+1 *30:Iex_3_i 0.00184113
+2 *31:Iext3 0
+3 *19:7 0.00474229
+4 *19:5 0.00290116
+5 *19:7 *20:7 0.0157026
+6 *30:Vin *19:7 0.00020788
+7 *30:Iex_1_i *30:Iex_3_i 0.000470063
+8 *30:Iex_1_i *19:7 0
+9 *30:Iex_2_i *19:7 0.00272672
+*RES
+1 *31:Iext3 *19:5 4.5 
+2 *19:5 *19:7 51.75 
+3 *19:7 *30:Iex_3_i 18.495 
+*END
+
+*D_NET *20 0.0306031
+*CONN
+*I *30:Iex_4_i I *D encoder
+*I *31:Iext4 I *D layer_input
+*CAP
+1 *30:Iex_4_i 0.00280627
+2 *31:Iext4 0
+3 *20:7 0.00653685
+4 *20:5 0.00373059
+5 *30:Vin_neg *30:Iex_4_i 0.000396692
+6 *30:Iex_1_i *20:7 0.000136314
+7 *7:16 *20:7 0.00129076
+8 *18:16 *20:7 3.03444e-06
+9 *19:7 *20:7 0.0157026
+*RES
+1 *31:Iext4 *20:5 4.5 
+2 *20:5 *20:7 54.09 
+3 *20:7 *30:Iex_4_i 34.38 
+*END
+
+*D_NET *21 0.0175721
+*CONN
+*I *32:nvout_1 I *D layer_output
+*I *33:nvpost1 I *D stdp_4x2
+*CAP
+1 *32:nvout_1 0.00274061
+2 *33:nvpost1 0.00468513
+3 *21:18 0.00742574
+4 *32:nvout_1 *22:30 0.000189553
+5 *32:Iext2 *21:18 0.000595689
+6 *32:vout_2 *32:nvout_1 0.00169993
+7 *32:vout_2 *21:18 0.000235483
+*RES
+1 *33:nvpost1 *21:18 47.2881 
+2 *21:18 *32:nvout_1 39.6274 
+*END
+
+*D_NET *22 0.0167584
+*CONN
+*I *32:nvout_2 I *D layer_output
+*I *33:nvpost2 I *D stdp_4x2
+*CAP
+1 *32:nvout_2 0
+2 *33:nvpost2 0.00381986
+3 *22:30 0.00387667
+4 *22:12 0.00769653
+5 *32:nvout_1 *22:30 0.000189553
+6 *32:vout_2 *22:30 0.000813463
+7 *33:vpost2 *22:30 0.000362315
+*RES
+1 *33:nvpost2 *22:12 38.655 
+2 *22:12 *22:30 46.2191 
+3 *22:30 *32:nvout_2 4.5 
+*END
+
+*D_NET *23 0.00756808
+*CONN
+*I *31:nvout_1 I *D layer_input
+*I *33:nvpre1 I *D stdp_4x2
+*CAP
+1 *31:nvout_1 0.00378404
+2 *33:nvpre1 0.00378404
+*RES
+1 *33:nvpre1 *31:nvout_1 29.7 
+*END
+
+*D_NET *24 0.00548676
+*CONN
+*I *31:nvout_2 I *D layer_input
+*I *33:nvpre2 I *D stdp_4x2
+*CAP
+1 *31:nvout_2 0.00274338
+2 *33:nvpre2 0.00274338
+*RES
+1 *33:nvpre2 *31:nvout_2 30.285 
+*END
+
+*D_NET *25 0.00526618
+*CONN
+*I *31:nvout_3 I *D layer_input
+*I *33:nvpre3 I *D stdp_4x2
+*CAP
+1 *31:nvout_3 0.00255099
+2 *33:nvpre3 0.00255099
+3 *31:nvout_3 *31:vout_3 0.000119337
+4 *31:nvout_3 *31:vout_4 4.48715e-05
+*RES
+1 *33:nvpre3 *31:nvout_3 28.35 
+*END
+
+*D_NET *26 0.00553519
+*CONN
+*I *31:nvout_4 I *D layer_input
+*I *33:nvpre4 I *D stdp_4x2
+*CAP
+1 *31:nvout_4 0.00253269
+2 *33:nvpre4 0.00253269
+3 *29:B *31:nvout_4 0.000469807
+*RES
+1 *33:nvpre4 *31:nvout_4 29.205 
+*END
+
+*D_NET *27 0.00695738
+*CONN
+*I *31:vout_3 I *D layer_input
+*I *33:vpre3 I *D stdp_4x2
+*CAP
+1 *31:vout_3 0.00341902
+2 *33:vpre3 0.00341902
+3 *31:nvout_3 *31:vout_3 0.000119337
+*RES
+1 *33:vpre3 *31:vout_3 28.62 
+*END
+
+*D_NET *28 0.00641502
+*CONN
+*I *31:vout_4 I *D layer_input
+*I *33:vpre4 I *D stdp_4x2
+*CAP
+1 *31:vout_4 0.00318508
+2 *33:vpre4 0.00318508
+3 *31:nvout_3 *31:vout_4 4.48715e-05
+*RES
+1 *33:vpre4 *31:vout_4 27.99 
+*END

@@ -1,0 +1,63 @@
+MACROS:
+  contador:
+    gds:
+      - dir::build/contador/gds/contador.gds
+    lef:
+      - dir::build/contador/lef/contador.lef
+    vh:
+      - dir::build/contador/vh/contador.vh
+    nl:
+      - dir::build/contador/nl/contador.nl.v
+    pnl:
+      - dir::build/contador/pnl/contador.pnl.v
+    spice:
+      - dir::build/contador/spice/contador.spice
+    sdf:
+      max_ff_n40C_3v60:
+        - dir::build/contador/sdf/max_ff_n40C_3v60/contador__max_ff_n40C_3v60.sdf
+      max_ss_125C_3v00:
+        - dir::build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf
+      max_tt_025C_3v30:
+        - dir::build/contador/sdf/max_tt_025C_3v30/contador__max_tt_025C_3v30.sdf
+      min_ff_n40C_3v60:
+        - dir::build/contador/sdf/min_ff_n40C_3v60/contador__min_ff_n40C_3v60.sdf
+      min_ss_125C_3v00:
+        - dir::build/contador/sdf/min_ss_125C_3v00/contador__min_ss_125C_3v00.sdf
+      min_tt_025C_3v30:
+        - dir::build/contador/sdf/min_tt_025C_3v30/contador__min_tt_025C_3v30.sdf
+      nom_ff_n40C_3v60:
+        - dir::build/contador/sdf/nom_ff_n40C_3v60/contador__nom_ff_n40C_3v60.sdf
+      nom_ss_125C_3v00:
+        - dir::build/contador/sdf/nom_ss_125C_3v00/contador__nom_ss_125C_3v00.sdf
+      nom_tt_025C_3v30:
+        - dir::build/contador/sdf/nom_tt_025C_3v30/contador__nom_tt_025C_3v30.sdf
+    lib:
+      max_ff_n40C_3v60:
+        - dir::build/contador/lib/max_ff_n40C_3v60/contador__max_ff_n40C_3v60.lib
+      max_ss_125C_3v00:
+        - dir::build/contador/lib/max_ss_125C_3v00/contador__max_ss_125C_3v00.lib
+      max_tt_025C_3v30:
+        - dir::build/contador/lib/max_tt_025C_3v30/contador__max_tt_025C_3v30.lib
+      min_ff_n40C_3v60:
+        - dir::build/contador/lib/min_ff_n40C_3v60/contador__min_ff_n40C_3v60.lib
+      min_ss_125C_3v00:
+        - dir::build/contador/lib/min_ss_125C_3v00/contador__min_ss_125C_3v00.lib
+      min_tt_025C_3v30:
+        - dir::build/contador/lib/min_tt_025C_3v30/contador__min_tt_025C_3v30.lib
+      nom_ff_n40C_3v60:
+        - dir::build/contador/lib/nom_ff_n40C_3v60/contador__nom_ff_n40C_3v60.lib
+      nom_ss_125C_3v00:
+        - dir::build/contador/lib/nom_ss_125C_3v00/contador__nom_ss_125C_3v00.lib
+      nom_tt_025C_3v30:
+        - dir::build/contador/lib/nom_tt_025C_3v30/contador__nom_tt_025C_3v30.lib
+    spef:
+      max:
+        - dir::build/contador/spef/max/contador.max.spef
+      min:
+        - dir::build/contador/spef/min/contador.min.spef
+      nom:
+        - dir::build/contador/spef/nom/contador.nom.spef
+    instances:
+      i_chip_core.contador_u:
+        location: [550, 550]
+        orientation: N

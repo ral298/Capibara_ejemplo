@@ -12,7 +12,6 @@ module chip_core #(
     inout  wire VDD,
     inout  wire VSS,
     `endif
-    
     input  wire clk,       // clock
     input  wire rst_n,     // reset (active low)
     
@@ -29,74 +28,101 @@ module chip_core #(
     output wire [NUM_BIDIR_PADS-1:0] bidir_pu,   // Pull-up
     output wire [NUM_BIDIR_PADS-1:0] bidir_pd,   // Pull-down
 
-    inout  wire [NUM_ANALOG_PADS-1:0] analog  // Analog
+    inout  wire [NUM_ANALOG_PADS-1:0] analog
 );
-
     // See here for usage: https://gf180mcu-pdk.readthedocs.io/en/latest/IPs/IO/gf180mcu_fd_io/digital.html
     
-    // Disable pull-up and pull-down for input
+    // ============================================================
+    // Pines de entrada dedicados:
+    // NO se utilizan en este proyecto.
+    // ============================================================
+
     assign input_pu = '0;
     assign input_pd = '0;
 
-    // Set the bidir as output
-    assign bidir_oe = '1;
-    assign bidir_cs = '0;
-    assign bidir_sl = '0;
-    assign bidir_ie = ~bidir_oe;
-    assign bidir_pu = '0;
-    assign bidir_pd = '0;
+
+
+    wire [3:0] resultado_contador;
+   
+    // ============================================================
+    // Instancia del contador
+    // ============================================================
+    //enable tiene que ser bidir_in[0]
+    //suma_resta tiene que ser bidir_in[1]
+    //resultado_contador tiene que ser la variable "resultado" de la instancia
+
+
+
+
+
+
+
+
+
+
+
+
+    /*(* keep *)
+    D14_topcell D14_topcell_u(
+        .Vin        (analog[0]),
+        .Vin_neg    (analog[1]),
+        .vw11       (analog[2]),
+        .vw42       (analog[3]),
+        .vpre1      (analog[4]),
+        .vpre2      (analog[5]),
+        .vpost1     (analog[6]),
+        .vpost2     (analog[7])
+    );*/
     
-    logic _unused;
-    assign _unused = &bidir_in;
+    
+    //Configurar bidir_out, que resultado_contador tiene que estar en los bits 5:2
+    // usar assign
 
-    logic [NUM_BIDIR_PADS-1:0] count;
 
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            count <= '0;
-        end else begin
-            if (&input_in) begin
-                count <= count + 1;
-            end
-        end
-    end
 
-    logic [7:0] sram_0_out;
 
-    `gf180mcu_xxx_ip_sram__sram512x8m8wm1 sram_0 (
-        `ifdef USE_POWER_PINS
-        .VDD  (VDD),
-        .VSS  (VSS),
-        `endif
 
-        .CLK  (clk),
-        .CEN  (1'b1),
-        .GWEN (1'b0),
-        .WEN  (8'b0),
-        .A    ('0),
-        .D    ('0),
-        .Q    (sram_0_out)
-    );
 
-    logic [7:0] sram_1_out;
 
-    `gf180mcu_xxx_ip_sram__sram512x8m8wm1 sram_1 (
-        `ifdef USE_POWER_PINS
-        .VDD  (VDD),
-        .VSS  (VSS),
-        `endif
 
-        .CLK  (clk),
-        .CEN  (1'b1),
-        .GWEN (1'b0),
-        .WEN  (8'b0),
-        .A    ('0),
-        .D    ('0),
-        .Q    (sram_1_out)
-    );
 
-    assign bidir_out = count ^ {24'd0, sram_0_out, sram_1_out};
+    //Configurar bidir_oe, que resultado_contador tiene que estar en los bits 5:2 como salidas y las entradas para los bits 1:0
+    // usar assign
+
+
+
+
+
+
+
+
+
+
+
+
+    //Configurar bidir_ie, que resultado_contador tiene que estar en los bits 5:2 como salidas y las entradas para los bits 1:0
+    // usar assign
+
+
+
+
+
+
+
+
+    //usar bidir_cs, bidir_sl, bidir_pu, bidir_pd todo en 0, se explicara| el porque
+
+
+
+
+
+
+
+    wire _unused;
+    assign _unused = &{1'b0, input_in, bidir_in[NUM_BIDIR_PADS-1:2]};
 
 endmodule
 
 `default_nettype wire
+
+

@@ -1,0 +1,268 @@
+gf180mcu_fd_sc_mcu7t5v0__inv_20 (2)        |gf180mcu_fd_sc_mcu7t5v0__inv_20 (2)        
+gf180mcu_fd_sc_mcu7t5v0__buf_20 (1)        |gf180mcu_fd_sc_mcu7t5v0__buf_20 (1)        
+gf180mcu_fd_sc_mcu7t5v0__or2_4 (2)         |gf180mcu_fd_sc_mcu7t5v0__or2_4 (2)         
+gf180mcu_fd_sc_mcu7t5v0__oai211_2 (2)      |gf180mcu_fd_sc_mcu7t5v0__oai211_2 (2)      
+gf180mcu_fd_sc_mcu7t5v0__oai221_1 (1)      |gf180mcu_fd_sc_mcu7t5v0__oai221_1 (1)      
+gf180mcu_fd_sc_mcu7t5v0__nor4_4 (1)        |gf180mcu_fd_sc_mcu7t5v0__nor4_4 (1)        
+Number of devices: 7944                    |Number of devices: 7944                    
+Number of nets: 7911 **Mismatch**          |Number of nets: 7916 **Mismatch**          
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: tiny_cnn_accelerator            |Circuit 2: tiny_cnn_accelerator            
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: VDD                                   
+  gf180mcu_fd_sc_mcu7t5v0__antenna/VDD = 2 |  gf180mcu_fd_sc_mcu7t5v0__antenna/VDD = 2 
+  gf180mcu_fd_sc_mcu7t5v0__antenna/VNW = 2 |  gf180mcu_fd_sc_mcu7t5v0__antenna/VNW = 2 
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_32/VDD  |  gf180mcu_fd_sc_mcu7t5v0__fillcap_32/VDD  
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_32/VNW  |  gf180mcu_fd_sc_mcu7t5v0__fillcap_32/VNW  
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_8/VDD = |  gf180mcu_fd_sc_mcu7t5v0__fillcap_8/VDD = 
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_8/VNW = |  gf180mcu_fd_sc_mcu7t5v0__fillcap_8/VNW = 
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_4/VDD = |  gf180mcu_fd_sc_mcu7t5v0__fillcap_4/VDD = 
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_4/VNW = |  gf180mcu_fd_sc_mcu7t5v0__fillcap_4/VNW = 
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_16/VDD  |  gf180mcu_fd_sc_mcu7t5v0__fillcap_16/VDD  
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_16/VNW  |  gf180mcu_fd_sc_mcu7t5v0__fillcap_16/VNW  
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_64/VDD  |  gf180mcu_fd_sc_mcu7t5v0__fillcap_64/VDD  
+  gf180mcu_fd_sc_mcu7t5v0__fillcap_64/VNW  |  gf180mcu_fd_sc_mcu7t5v0__fillcap_64/VNW  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__nor2_1/VDD = 25 |  gf180mcu_fd_sc_mcu7t5v0__nor2_1/VDD = 25 
+  gf180mcu_fd_sc_mcu7t5v0__nor2_1/VNW = 25 |  gf180mcu_fd_sc_mcu7t5v0__nor2_1/VNW = 25 
+  gf180mcu_fd_sc_mcu7t5v0__and2_1/VDD = 43 |  gf180mcu_fd_sc_mcu7t5v0__and2_1/VDD = 43 
+  gf180mcu_fd_sc_mcu7t5v0__and2_1/VNW = 43 |  gf180mcu_fd_sc_mcu7t5v0__and2_1/VNW = 43 
+  gf180mcu_fd_sc_mcu7t5v0__buf_1/VDD = 472 |  gf180mcu_fd_sc_mcu7t5v0__buf_1/VDD = 472 
+  gf180mcu_fd_sc_mcu7t5v0__buf_1/VNW = 472 |  gf180mcu_fd_sc_mcu7t5v0__buf_1/VNW = 472 
+  gf180mcu_fd_sc_mcu7t5v0__nor4_1/VDD = 29 |  gf180mcu_fd_sc_mcu7t5v0__nor4_1/VDD = 29 
+  gf180mcu_fd_sc_mcu7t5v0__nor4_1/VNW = 29 |  gf180mcu_fd_sc_mcu7t5v0__nor4_1/VNW = 29 
+  gf180mcu_fd_sc_mcu7t5v0__nand3_1/VDD = 3 |  gf180mcu_fd_sc_mcu7t5v0__nand3_1/VDD = 3 
+  gf180mcu_fd_sc_mcu7t5v0__nand3_1/VNW = 3 |  gf180mcu_fd_sc_mcu7t5v0__nand3_1/VNW = 3 
+  gf180mcu_fd_sc_mcu7t5v0__nand4_1/VDD = 5 |  gf180mcu_fd_sc_mcu7t5v0__nand4_1/VDD = 5 
+  gf180mcu_fd_sc_mcu7t5v0__nand4_1/VNW = 5 |  gf180mcu_fd_sc_mcu7t5v0__nand4_1/VNW = 5 
+  gf180mcu_fd_sc_mcu7t5v0__nand2_1/VDD = 1 |  gf180mcu_fd_sc_mcu7t5v0__nand2_1/VDD = 1 
+  gf180mcu_fd_sc_mcu7t5v0__nand2_1/VNW = 1 |  gf180mcu_fd_sc_mcu7t5v0__nand2_1/VNW = 1 
+  gf180mcu_fd_sc_mcu7t5v0__or2_1/VDD = 13  |  gf180mcu_fd_sc_mcu7t5v0__or2_1/VDD = 13  
+  gf180mcu_fd_sc_mcu7t5v0__or2_1/VNW = 13  |  gf180mcu_fd_sc_mcu7t5v0__or2_1/VNW = 13  
+  gf180mcu_fd_sc_mcu7t5v0__inv_1/VDD = 31  |  gf180mcu_fd_sc_mcu7t5v0__inv_1/VDD = 31  
+  gf180mcu_fd_sc_mcu7t5v0__inv_1/VNW = 31  |  gf180mcu_fd_sc_mcu7t5v0__inv_1/VNW = 31  
+  gf180mcu_fd_sc_mcu7t5v0__or4_1/VDD = 10  |  gf180mcu_fd_sc_mcu7t5v0__or4_1/VDD = 10  
+  gf180mcu_fd_sc_mcu7t5v0__or4_1/VNW = 10  |  gf180mcu_fd_sc_mcu7t5v0__or4_1/VNW = 10  
+  gf180mcu_fd_sc_mcu7t5v0__and4_1/VDD = 4  |  gf180mcu_fd_sc_mcu7t5v0__and4_1/VDD = 4  
+  gf180mcu_fd_sc_mcu7t5v0__and4_1/VNW = 4  |  gf180mcu_fd_sc_mcu7t5v0__and4_1/VNW = 4  
+  gf180mcu_fd_sc_mcu7t5v0__nor3_1/VDD = 46 |  gf180mcu_fd_sc_mcu7t5v0__nor3_1/VDD = 46 
+  gf180mcu_fd_sc_mcu7t5v0__nor3_1/VNW = 46 |  gf180mcu_fd_sc_mcu7t5v0__nor3_1/VNW = 46 
+  gf180mcu_fd_sc_mcu7t5v0__oai31_1/VDD = 1 |  gf180mcu_fd_sc_mcu7t5v0__oai31_1/VDD = 1 
+  gf180mcu_fd_sc_mcu7t5v0__oai31_1/VNW = 1 |  gf180mcu_fd_sc_mcu7t5v0__oai31_1/VNW = 1 
+  gf180mcu_fd_sc_mcu7t5v0__aoi221_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__aoi221_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi221_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__aoi221_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi211_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__aoi211_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi211_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__aoi211_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__oai211_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__oai211_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__oai211_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__oai211_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi21_1/VDD = 1 |  gf180mcu_fd_sc_mcu7t5v0__aoi21_1/VDD = 1 
+  gf180mcu_fd_sc_mcu7t5v0__aoi21_1/VNW = 1 |  gf180mcu_fd_sc_mcu7t5v0__aoi21_1/VNW = 1 
+  gf180mcu_fd_sc_mcu7t5v0__oai32_1/VDD = 3 |  gf180mcu_fd_sc_mcu7t5v0__oai32_1/VDD = 3 
+  gf180mcu_fd_sc_mcu7t5v0__oai32_1/VNW = 3 |  gf180mcu_fd_sc_mcu7t5v0__oai32_1/VNW = 3 
+  gf180mcu_fd_sc_mcu7t5v0__oai21_1/VDD = 4 |  gf180mcu_fd_sc_mcu7t5v0__oai21_1/VDD = 4 
+  gf180mcu_fd_sc_mcu7t5v0__oai21_1/VNW = 4 |  gf180mcu_fd_sc_mcu7t5v0__oai21_1/VNW = 4 
+  gf180mcu_fd_sc_mcu7t5v0__nor3_2/VDD = 5  |  gf180mcu_fd_sc_mcu7t5v0__nor3_2/VDD = 5  
+  gf180mcu_fd_sc_mcu7t5v0__nor3_2/VNW = 5  |  gf180mcu_fd_sc_mcu7t5v0__nor3_2/VNW = 5  
+  gf180mcu_fd_sc_mcu7t5v0__oai221_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__oai221_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__oai221_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__oai221_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__and3_1/VDD = 22 |  gf180mcu_fd_sc_mcu7t5v0__and3_1/VDD = 22 
+  gf180mcu_fd_sc_mcu7t5v0__and3_1/VNW = 22 |  gf180mcu_fd_sc_mcu7t5v0__and3_1/VNW = 22 
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__oai22_1/VDD = 5 |  gf180mcu_fd_sc_mcu7t5v0__oai22_1/VDD = 5 
+  gf180mcu_fd_sc_mcu7t5v0__oai22_1/VNW = 5 |  gf180mcu_fd_sc_mcu7t5v0__oai22_1/VNW = 5 
+  gf180mcu_fd_sc_mcu7t5v0__aoi22_1/VDD = 1 |  gf180mcu_fd_sc_mcu7t5v0__aoi22_1/VDD = 1 
+  gf180mcu_fd_sc_mcu7t5v0__aoi22_1/VNW = 1 |  gf180mcu_fd_sc_mcu7t5v0__aoi22_1/VNW = 1 
+  gf180mcu_fd_sc_mcu7t5v0__or3_1/VDD = 2   |  gf180mcu_fd_sc_mcu7t5v0__or3_1/VDD = 2   
+  gf180mcu_fd_sc_mcu7t5v0__or3_1/VNW = 2   |  gf180mcu_fd_sc_mcu7t5v0__or3_1/VNW = 2   
+  gf180mcu_fd_sc_mcu7t5v0__nand2_2/VDD = 5 |  gf180mcu_fd_sc_mcu7t5v0__nand2_2/VDD = 5 
+  gf180mcu_fd_sc_mcu7t5v0__nand2_2/VNW = 5 |  gf180mcu_fd_sc_mcu7t5v0__nand2_2/VNW = 5 
+  gf180mcu_fd_sc_mcu7t5v0__inv_2/VDD = 33  |  gf180mcu_fd_sc_mcu7t5v0__inv_2/VDD = 33  
+  gf180mcu_fd_sc_mcu7t5v0__inv_2/VNW = 33  |  gf180mcu_fd_sc_mcu7t5v0__inv_2/VNW = 33  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_2/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_2/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_2/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_2/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__nand3_2/VDD = 1 |  gf180mcu_fd_sc_mcu7t5v0__nand3_2/VDD = 1 
+  gf180mcu_fd_sc_mcu7t5v0__nand3_2/VNW = 1 |  gf180mcu_fd_sc_mcu7t5v0__nand3_2/VNW = 1 
+  gf180mcu_fd_sc_mcu7t5v0__nor3_4/VDD = 5  |  gf180mcu_fd_sc_mcu7t5v0__nor3_4/VDD = 5  
+  gf180mcu_fd_sc_mcu7t5v0__nor3_4/VNW = 5  |  gf180mcu_fd_sc_mcu7t5v0__nor3_4/VNW = 5  
+  gf180mcu_fd_sc_mcu7t5v0__nand4_2/VDD = 1 |  gf180mcu_fd_sc_mcu7t5v0__nand4_2/VDD = 1 
+  gf180mcu_fd_sc_mcu7t5v0__nand4_2/VNW = 1 |  gf180mcu_fd_sc_mcu7t5v0__nand4_2/VNW = 1 
+  gf180mcu_fd_sc_mcu7t5v0__inv_3/VDD = 6   |  gf180mcu_fd_sc_mcu7t5v0__inv_3/VDD = 6   
+  gf180mcu_fd_sc_mcu7t5v0__inv_3/VNW = 6   |  gf180mcu_fd_sc_mcu7t5v0__inv_3/VNW = 6   
+  gf180mcu_fd_sc_mcu7t5v0__inv_8/VDD = 7   |  gf180mcu_fd_sc_mcu7t5v0__inv_8/VDD = 7   
+  gf180mcu_fd_sc_mcu7t5v0__inv_8/VNW = 7   |  gf180mcu_fd_sc_mcu7t5v0__inv_8/VNW = 7   
+  gf180mcu_fd_sc_mcu7t5v0__nand2_4/VDD = 2 |  gf180mcu_fd_sc_mcu7t5v0__nand2_4/VDD = 2 
+  gf180mcu_fd_sc_mcu7t5v0__nand2_4/VNW = 2 |  gf180mcu_fd_sc_mcu7t5v0__nand2_4/VNW = 2 
+  gf180mcu_fd_sc_mcu7t5v0__inv_16/VDD = 24 |  gf180mcu_fd_sc_mcu7t5v0__inv_16/VDD = 24 
+  gf180mcu_fd_sc_mcu7t5v0__inv_16/VNW = 24 |  gf180mcu_fd_sc_mcu7t5v0__inv_16/VNW = 24 
+  gf180mcu_fd_sc_mcu7t5v0__nor2_2/VDD = 11 |  gf180mcu_fd_sc_mcu7t5v0__nor2_2/VDD = 11 
+  gf180mcu_fd_sc_mcu7t5v0__nor2_2/VNW = 11 |  gf180mcu_fd_sc_mcu7t5v0__nor2_2/VNW = 11 
+  gf180mcu_fd_sc_mcu7t5v0__inv_4/VDD = 5   |  gf180mcu_fd_sc_mcu7t5v0__inv_4/VDD = 5   
+  gf180mcu_fd_sc_mcu7t5v0__inv_4/VNW = 5   |  gf180mcu_fd_sc_mcu7t5v0__inv_4/VNW = 5   
+  gf180mcu_fd_sc_mcu7t5v0__and2_2/VDD = 28 |  gf180mcu_fd_sc_mcu7t5v0__and2_2/VDD = 28 
+  gf180mcu_fd_sc_mcu7t5v0__and2_2/VNW = 28 |  gf180mcu_fd_sc_mcu7t5v0__and2_2/VNW = 28 
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_16/VDD = |  gf180mcu_fd_sc_mcu7t5v0__clkinv_16/VDD = 
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_16/VNW = |  gf180mcu_fd_sc_mcu7t5v0__clkinv_16/VNW = 
+  gf180mcu_fd_sc_mcu7t5v0__aoi21_2/VDD = 3 |  gf180mcu_fd_sc_mcu7t5v0__aoi21_2/VDD = 3 
+  gf180mcu_fd_sc_mcu7t5v0__aoi21_2/VNW = 3 |  gf180mcu_fd_sc_mcu7t5v0__aoi21_2/VNW = 3 
+  gf180mcu_fd_sc_mcu7t5v0__inv_12/VDD = 10 |  gf180mcu_fd_sc_mcu7t5v0__inv_12/VDD = 10 
+  gf180mcu_fd_sc_mcu7t5v0__inv_12/VNW = 10 |  gf180mcu_fd_sc_mcu7t5v0__inv_12/VNW = 10 
+  gf180mcu_fd_sc_mcu7t5v0__nor2_4/VDD = 86 |  gf180mcu_fd_sc_mcu7t5v0__nor2_4/VDD = 86 
+  gf180mcu_fd_sc_mcu7t5v0__nor2_4/VNW = 86 |  gf180mcu_fd_sc_mcu7t5v0__nor2_4/VNW = 86 
+  gf180mcu_fd_sc_mcu7t5v0__and2_4/VDD = 10 |  gf180mcu_fd_sc_mcu7t5v0__and2_4/VDD = 10 
+  gf180mcu_fd_sc_mcu7t5v0__and2_4/VNW = 10 |  gf180mcu_fd_sc_mcu7t5v0__and2_4/VNW = 10 
+  gf180mcu_fd_sc_mcu7t5v0__aoi21_4/VDD = 2 |  gf180mcu_fd_sc_mcu7t5v0__aoi21_4/VDD = 2 
+  gf180mcu_fd_sc_mcu7t5v0__aoi21_4/VNW = 2 |  gf180mcu_fd_sc_mcu7t5v0__aoi21_4/VNW = 2 
+  gf180mcu_fd_sc_mcu7t5v0__or2_2/VDD = 17  |  gf180mcu_fd_sc_mcu7t5v0__or2_2/VDD = 17  
+  gf180mcu_fd_sc_mcu7t5v0__or2_2/VNW = 17  |  gf180mcu_fd_sc_mcu7t5v0__or2_2/VNW = 17  
+  gf180mcu_fd_sc_mcu7t5v0__inv_20/VDD = 2  |  gf180mcu_fd_sc_mcu7t5v0__inv_20/VDD = 2  
+  gf180mcu_fd_sc_mcu7t5v0__inv_20/VNW = 2  |  gf180mcu_fd_sc_mcu7t5v0__inv_20/VNW = 2  
+  gf180mcu_fd_sc_mcu7t5v0__and3_2/VDD = 3  |  gf180mcu_fd_sc_mcu7t5v0__and3_2/VDD = 3  
+  gf180mcu_fd_sc_mcu7t5v0__and3_2/VNW = 3  |  gf180mcu_fd_sc_mcu7t5v0__and3_2/VNW = 3  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_8/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_8/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_8/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_8/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_3/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_3/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_3/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_3/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__nand3_4/VDD = 2 |  gf180mcu_fd_sc_mcu7t5v0__nand3_4/VDD = 2 
+  gf180mcu_fd_sc_mcu7t5v0__nand3_4/VNW = 2 |  gf180mcu_fd_sc_mcu7t5v0__nand3_4/VNW = 2 
+  gf180mcu_fd_sc_mcu7t5v0__aoi22_4/VDD = 4 |  gf180mcu_fd_sc_mcu7t5v0__aoi22_4/VDD = 4 
+  gf180mcu_fd_sc_mcu7t5v0__aoi22_4/VNW = 4 |  gf180mcu_fd_sc_mcu7t5v0__aoi22_4/VNW = 4 
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_2/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_2/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_2/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_2/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__oai21_4/VDD = 2 |  gf180mcu_fd_sc_mcu7t5v0__oai21_4/VDD = 2 
+  gf180mcu_fd_sc_mcu7t5v0__oai21_4/VNW = 2 |  gf180mcu_fd_sc_mcu7t5v0__oai21_4/VNW = 2 
+  gf180mcu_fd_sc_mcu7t5v0__oai21_2/VDD = 3 |  gf180mcu_fd_sc_mcu7t5v0__oai21_2/VDD = 3 
+  gf180mcu_fd_sc_mcu7t5v0__oai21_2/VNW = 3 |  gf180mcu_fd_sc_mcu7t5v0__oai21_2/VNW = 3 
+  gf180mcu_fd_sc_mcu7t5v0__oai211_2/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__oai211_2/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__oai211_2/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__oai211_2/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__buf_8/VDD = 129 |  gf180mcu_fd_sc_mcu7t5v0__buf_8/VDD = 129 
+  gf180mcu_fd_sc_mcu7t5v0__buf_8/VNW = 129 |  gf180mcu_fd_sc_mcu7t5v0__buf_8/VNW = 129 
+  gf180mcu_fd_sc_mcu7t5v0__buf_4/VDD = 91  |  gf180mcu_fd_sc_mcu7t5v0__buf_4/VDD = 91  
+  gf180mcu_fd_sc_mcu7t5v0__buf_4/VNW = 91  |  gf180mcu_fd_sc_mcu7t5v0__buf_4/VNW = 91  
+  gf180mcu_fd_sc_mcu7t5v0__buf_2/VDD = 55  |  gf180mcu_fd_sc_mcu7t5v0__buf_2/VDD = 55  
+  gf180mcu_fd_sc_mcu7t5v0__buf_2/VNW = 55  |  gf180mcu_fd_sc_mcu7t5v0__buf_2/VNW = 55  
+  gf180mcu_fd_sc_mcu7t5v0__buf_12/VDD = 23 |  gf180mcu_fd_sc_mcu7t5v0__buf_12/VDD = 23 
+  gf180mcu_fd_sc_mcu7t5v0__buf_12/VNW = 23 |  gf180mcu_fd_sc_mcu7t5v0__buf_12/VNW = 23 
+  gf180mcu_fd_sc_mcu7t5v0__buf_3/VDD = 14  |  gf180mcu_fd_sc_mcu7t5v0__buf_3/VDD = 14  
+  gf180mcu_fd_sc_mcu7t5v0__buf_3/VNW = 14  |  gf180mcu_fd_sc_mcu7t5v0__buf_3/VNW = 14  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_4/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_4/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_4/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkinv_4/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi211_4/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__aoi211_4/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi211_4/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__aoi211_4/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__or2_4/VDD = 2   |  gf180mcu_fd_sc_mcu7t5v0__or2_4/VDD = 2   
+  gf180mcu_fd_sc_mcu7t5v0__or2_4/VNW = 2   |  gf180mcu_fd_sc_mcu7t5v0__or2_4/VNW = 2   
+  gf180mcu_fd_sc_mcu7t5v0__nand4_4/VDD = 7 |  gf180mcu_fd_sc_mcu7t5v0__nand4_4/VDD = 7 
+  gf180mcu_fd_sc_mcu7t5v0__nand4_4/VNW = 7 |  gf180mcu_fd_sc_mcu7t5v0__nand4_4/VNW = 7 
+  gf180mcu_fd_sc_mcu7t5v0__buf_20/VDD = 1  |  gf180mcu_fd_sc_mcu7t5v0__buf_20/VDD = 1  
+  gf180mcu_fd_sc_mcu7t5v0__buf_20/VNW = 1  |  gf180mcu_fd_sc_mcu7t5v0__buf_20/VNW = 1  
+  gf180mcu_fd_sc_mcu7t5v0__buf_16/VDD = 1  |  gf180mcu_fd_sc_mcu7t5v0__buf_16/VDD = 1  
+  gf180mcu_fd_sc_mcu7t5v0__buf_16/VNW = 1  |  gf180mcu_fd_sc_mcu7t5v0__buf_16/VNW = 1  
+  gf180mcu_fd_sc_mcu7t5v0__nor4_4/VDD = 1  |  gf180mcu_fd_sc_mcu7t5v0__nor4_4/VDD = 1  
+  gf180mcu_fd_sc_mcu7t5v0__nor4_4/VNW = 1  |  gf180mcu_fd_sc_mcu7t5v0__nor4_4/VNW = 1  
+  gf180mcu_fd_sc_mcu7t5v0__dlya_2/VDD = 1  |  gf180mcu_fd_sc_mcu7t5v0__dlya_2/VDD = 1  
+  gf180mcu_fd_sc_mcu7t5v0__dlya_2/VNW = 1  |  gf180mcu_fd_sc_mcu7t5v0__dlya_2/VNW = 1  
+  gf180mcu_fd_sc_mcu7t5v0__dlya_1/VDD = 3  |  gf180mcu_fd_sc_mcu7t5v0__dlya_1/VDD = 3  
+  gf180mcu_fd_sc_mcu7t5v0__dlya_1/VNW = 3  |  gf180mcu_fd_sc_mcu7t5v0__dlya_1/VNW = 3  
+  gf180mcu_fd_sc_mcu7t5v0__aoi211_2/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__aoi211_2/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__aoi211_2/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__aoi211_2/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__dlyb_1/VDD = 4  |  gf180mcu_fd_sc_mcu7t5v0__dlyb_1/VDD = 4  
+  gf180mcu_fd_sc_mcu7t5v0__dlyb_1/VNW = 4  |  gf180mcu_fd_sc_mcu7t5v0__dlyb_1/VNW = 4  
+  gf180mcu_fd_sc_mcu7t5v0__dffrnq_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__dffrnq_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__dffrnq_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__dffrnq_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__dffrnq_2/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__dffrnq_2/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__dffrnq_2/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__dffrnq_2/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__dffsnq_1/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__dffsnq_1/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__dffsnq_1/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__dffsnq_1/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__dffrnq_4/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__dffrnq_4/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__dffrnq_4/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__dffrnq_4/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_16/VDD = |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_16/VDD = 
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_16/VNW = |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_16/VNW = 
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_8/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_8/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_8/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_8/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__dlyd_1/VDD = 43 |  gf180mcu_fd_sc_mcu7t5v0__dlyd_1/VDD = 43 
+  gf180mcu_fd_sc_mcu7t5v0__dlyd_1/VNW = 43 |  gf180mcu_fd_sc_mcu7t5v0__dlyd_1/VNW = 43 
+  gf180mcu_fd_sc_mcu7t5v0__dlyc_1/VDD = 10 |  gf180mcu_fd_sc_mcu7t5v0__dlyc_1/VDD = 10 
+  gf180mcu_fd_sc_mcu7t5v0__dlyc_1/VNW = 10 |  gf180mcu_fd_sc_mcu7t5v0__dlyc_1/VNW = 10 
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_3/VDD =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_3/VDD =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_3/VNW =  |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_3/VNW =  
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/Z = 5  |                                           
+                                           |                                           
+(no matching net)                          |Net: debug_logit_o[31]                     
+                                           |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/Z = 1  
+                                           |                                           
+(no matching net)                          |Net: predicted_class[3]                    
+                                           |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/Z = 1  
+                                           |                                           
+(no matching net)                          |Net: predicted_class[1]                    
+                                           |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/Z = 1  
+                                           |                                           
+(no matching net)                          |Net: predicted_class[0]                    
+                                           |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/Z = 1  
+                                           |                                           
+(no matching net)                          |Net: debug_logit_o[29]                     
+                                           |  gf180mcu_fd_sc_mcu7t5v0__clkbuf_4/Z = 1  
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: tiny_cnn_accelerator            |Circuit 2: tiny_cnn_accelerator            
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+debug_logit_o[18]                          |debug_logit_o[18]                          
+debug_logit_o[9]                           |debug_logit_o[9]                           
+debug_logit_o[6]                           |debug_logit_o[6]                           
+debug_logit_o[2]                           |debug_logit_o[2]                           
+debug_logit_o[30]                          |debug_logit_o[30]                          
+debug_logit_o[8]                           |debug_logit_o[8]                           
+debug_logit_o[11]                          |debug_logit_o[11]                          
+debug_logit_o[10]                          |debug_logit_o[10]                          
+debug_logit_o[12]                          |debug_logit_o[12]                          
+debug_logit_o[13]                          |debug_logit_o[13]                          
+debug_logit_o[3]                           |debug_logit_o[3]                           
+debug_logit_o[4]                           |debug_logit_o[4]                           
+debug_logit_o[5]                           |debug_logit_o[5]                           
+busy                                       |busy                                       
+debug_logit_valid_o                        |debug_logit_valid_o                        
+debug_logit_index_o[3]                     |debug_logit_index_o[3]                     
+debug_logit_o[25]                          |debug_logit_o[25]                          
+debug_logit_o[26]                          |debug_logit_o[26]                          
+debug_logit_o[27]                          |debug_logit_o[27]                          
+debug_logit_o[19]                          |debug_logit_o[19]                          
+debug_logit_o[20]                          |debug_logit_o[20]                          
+debug_logit_o[15]                          |debug_logit_o[15]                          
+debug_logit_o[7]                           |debug_logit_o[7]                           
+debug_logit_index_o[1]                     |debug_logit_index_o[1]                     
+debug_logit_index_o[0]                     |debug_logit_index_o[0]                     
+debug_logit_o[0]                           |debug_logit_o[0]                           
+debug_logit_o[1]                           |debug_logit_o[1]                           
+debug_logit_o[17]                          |debug_logit_o[17]                          
+done                                       |done                                       
+predicted_class[2]                         |predicted_class[2]                         
+debug_logit_o[14]                          |debug_logit_o[14]                          
+debug_logit_index_o[2]                     |debug_logit_index_o[2]                     
+debug_logit_o[21]                          |debug_logit_o[21]                          
+debug_logit_o[22]                          |debug_logit_o[22]                          
+debug_logit_o[23]                          |debug_logit_o[23]                          
+debug_logit_o[24]                          |debug_logit_o[24]                          
+debug_logit_o[28]                          |debug_logit_o[28]                          
+debug_logit_o[16]                          |debug_logit_o[16]                          
+start                                      |start                                      
+rst_n                                      |rst_n                                      
+clk                                        |clk                                        
+VSS                                        |VSS                                        
+(no pin, node is VDD)                      |debug_logit_o[31]                          
+(no pin, node is VDD)                      |debug_logit_o[29]                          
+(no pin, node is VDD)                      |predicted_class[3]                         
+(no pin, node is VDD)                      |predicted_class[1]                         
+(no pin, node is VDD)                      |predicted_class[0]                         
+---------------------------------------------------------------------------------------
+Cell pin lists for tiny_cnn_accelerator and tiny_cnn_accelerator altered to match.
+Device classes tiny_cnn_accelerator and tiny_cnn_accelerator are equivalent.
+
+Final result: Top level cell failed pin matching.

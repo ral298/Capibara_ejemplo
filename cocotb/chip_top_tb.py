@@ -15,78 +15,302 @@ sim = os.getenv("SIM", "icarus")
 gl = os.getenv("GL", False)
 pdk_root = os.getenv("PDK_ROOT", Path(__file__).resolve().parent / "../gf180mcu")
 pdk = os.getenv("PDK", "gf180mcuD")
-scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu7t5v0")
-pad = os.getenv("PAD", "gf180mcu_fd_io")
-sram = os.getenv("SRAM", "gf180mcu_fd_ip_sram")
-slot = os.getenv("SLOT", "1x1")
+scl = os.getenv("SCL", "gf180mcu_as_sc_mcu7t3v3")
+pad = os.getenv("PAD", "gf180mcu_ocd_io")
+sram = os.getenv("SRAM", "gf180mcu_ocd_ip_sram")
+slot = os.getenv("SLOT", "1x0p5")
 
 hdl_toplevel = "chip_top"
 
-async def set_defaults(dut):
-    dut.input_PAD.value = 0
-
-async def enable_power(dut):
-    dut.VDD.value = 1
-    dut.VSS.value = 0
-
-async def start_clock(clock, freq=50):
-    """Start the clock @ freq MHz"""
-    c = Clock(clock, 1 / freq * 1000, "ns")
-    cocotb.start_soon(c.start())
+# 100 MHz -> 10 ns
+CLK_PERIOD_NS = 10
 
 
-async def reset(reset, active_low=True, time_ns=1000):
-    """Reset dut"""
-    cocotb.log.info("Reset asserted...")
+def set_bidir_inputs(dut, enable, suma_resta):
+    """
+    bidir_PAD[0] = enable
+    bidir_PAD[1] = suma_resta
+    bidir_PAD[NUM_BIDIR_PADS-1:2] = Z
+    """
+    from cocotb.types import LogicArray
 
-    reset.value = not active_low
-    await Timer(time_ns, "ns")
-    reset.value = active_low
+    num_bidir = len(dut.bidir_PAD)
 
-    cocotb.log.info("Reset deasserted.")
+    valor = (
+        "Z" * (num_bidir - 2) +
+        str(int(suma_resta)) +
+        str(int(enable))
+    )
+
+    dut.bidir_PAD.value = LogicArray(valor)
 
 
-async def start_up(dut):
-    """Startup sequence"""
-    await set_defaults(dut)
-    if gl:
-        await enable_power(dut)
-    await start_clock(dut.clk_PAD)
-    await reset(dut.rst_n_PAD)
+async def comprobar_salida(dut, esperado, mensaje=""):
+    await RisingEdge(dut.clk_PAD)
+    await FallingEdge(dut.clk_PAD)
+
+    valor = dut.bidir_PAD.value[5:2]
+
+    if not valor.is_resolvable:
+        raise AssertionError(
+            f"{mensaje} | bidir_PAD[5:2] contiene X/Z: {valor}"
+        )
+
+    obtenido = int(valor)
+
+    assert obtenido == esperado, (
+        f"{mensaje} | Esperado = {esperado:04b} ({esperado}), "
+        f"Obtenido = {obtenido:04b} ({obtenido})"
+    )
+
+    dut._log.info(
+        f"{mensaje}: salida = {obtenido:04b} ({obtenido})"
+    )
 
 
 @cocotb.test()
-async def test_counter(dut):
-    """Run the counter test"""
+async def test_contador(dut):
 
-    # Create a logger for this testbench
-    logger = logging.getLogger("my_testbench")
+    # ---------------------------------------------------------
+    # Inicialización
+    # reset es ACTIVO EN BAJO
+    # ---------------------------------------------------------
+    
+    
 
-    logger.info("Startup sequence...")
 
-    # Start up
-    await start_up(dut)
 
-    logger.info("Running the test...")
 
-    # Wait for some time...
-    await ClockCycles(dut.clk_PAD, 10)
 
-    # Please note that cocotb cannpt write to individual bits of a vector.
-    # If you need to write to individual bits, you can separate e.g. the 
-    # bidir_PAD vector into individual bits through a tb wrapper.
-    # Even better, use individual pad names for each bit.
 
-    # Start the counter by setting all inputs to 1
-    dut.input_PAD.value = -1
 
-    # Wait for a number of clock cycles
-    await ClockCycles(dut.clk_PAD, 100)
 
-    # Check the end result of the counter
-    assert dut.bidir_PAD.value == 100 - 1
 
-    logger.info("Done!")
+
+
+
+
+
+
+
+
+    if gl:
+        dut.VDD.value = 1
+        dut.VSS.value = 0
+    #utilizar la funcion set_bidir_inputs para colocar enable=0 y  suma_resta=1
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    await Timer(1, unit="ns")
+
+    cocotb.start_soon(
+        Clock(dut.clk_PAD, CLK_PERIOD_NS, unit="ns").start(start_high=False)
+    )
+
+    # ---------------------------------------------------------
+    # RESET
+    # ---------------------------------------------------------
+    await comprobar_salida(dut, 0, "RESET ciclo 1")
+    await comprobar_salida(dut, 0, "RESET ciclo 2")
+
+    # Liberar reset
+    dut.rst_n_PAD.value = 1
+
+    # ---------------------------------------------------------
+    # ENABLE = 0 -> mantener valor
+    # ---------------------------------------------------------
+    for i in range(3):
+        await comprobar_salida(
+            dut,
+            0,
+            f"ENABLE=0 ciclo {i + 1}"
+        )
+
+    # ---------------------------------------------------------
+    # CONTEO ASCENDENTE
+    # suma_resta = 1 -> +1
+    # ---------------------------------------------------------
+    #Colocar enable=1,suma_resta=1 con set_bidir_inputs
+    
+    
+    
+    
+
+
+
+    
+
+    dut._log.info("---- CONTEO ASCENDENTE ----")
+
+    for esperado in range(1, 16):
+        # hacer que cuente con la funcion comprobar_salida, que vaya comparando con esperado
+        
+
+
+
+
+
+
+
+
+    # 1111 + 0001 -> 0000
+    #sumarle un 1 para que llegue a 0
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # ---------------------------------------------------------
+    # CONTEO DESCENDENTE
+    # suma_resta = 0 -> +1111 = -1 en complemento a 2
+    # ---------------------------------------------------------
+    set_bidir_inputs(
+        dut,
+        enable=1,
+        suma_resta=0
+    )
+
+    dut._log.info("---- CONTEO DESCENDENTE ----")
+
+    for esperado in range(15, -1, -1):
+        #que cuente de manera decendente y haga la comparación con esperado
+
+
+
+
+
+
+
+
+
+
+
+
+    # ---------------------------------------------------------
+    # ENABLE = 0 -> HOLD
+    # ---------------------------------------------------------
+    set_bidir_inputs(
+        dut,
+        enable=0,
+        suma_resta=0
+    )
+    
+    for i in range(3):
+        #que intente contar y al no poder contar por enable=0 siempre tiene que esperar un 0
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # ---------------------------------------------------------
+    # Volver a contar antes del reset final
+    # ---------------------------------------------------------
+    set_bidir_inputs(
+        dut,
+        enable=1,
+        suma_resta=1
+    )
+
+    for esperado in range(1, 6):
+        await comprobar_salida(
+            dut,
+            esperado,
+            "SUMA antes de RESET"
+        )
+
+    # ---------------------------------------------------------
+    # RESET ASÍNCRONO ACTIVO EN BAJO
+    # ---------------------------------------------------------
+    dut.rst_n_PAD.value = 0
+
+    # Esperar propagación del reset a través del pad,
+    # pero menos de medio periodo del reloj.
+    await Timer(3, unit="ns")
+
+    valor = dut.bidir_PAD.value[5:2]
+
+    if not valor.is_resolvable:
+        raise AssertionError(
+            f"RESET asíncrono | bidir_PAD[5:2] contiene X/Z: {valor}"
+        )
+
+    assert int(valor) == 0, (
+        f"RESET asíncrono | Esperado 0000, obtenido {valor}"
+    )
+
+    dut._log.info("RESET asíncrono: salida = 0000 (0)")
+
+    # Liberar reset
+    dut.rst_n_PAD.value = 1
+
+    set_bidir_inputs(
+        dut,
+        enable=0,
+        suma_resta=1
+    )
+
+    dut._log.info(
+        "TEST PASSED: reset asíncrono, enable, suma, resta y overflow funcionan correctamente."
+    )
+
+    from cocotb.types import LogicArray
+
+    bv = LogicArray("0101")
+    dut._log.info("===============================================================")
+    dut._log.info("bv.get_value(): " + str(bv))
+    dut._log.info("bv.integer: " + str(bv))
+    dut._log.info("===============================================================")
+
+    bv = LogicArray.from_unsigned(7, 4)
+    dut._log.info("===============================================================")
+    dut._log.info("bv.get_value(): " + str(bv))
+    dut._log.info("bv.integer: " + str(bv))
+    dut._log.info("===============================================================")
+
+    bv = LogicArray("ZZZ1")
+    dut._log.info("bv.get_value(): " + str(bv))
+    dut._log.info("bv.integer: " + str(bv))
+    dut._log.info("===============================================================")
 
 
 def chip_top_runner():
@@ -101,7 +325,7 @@ def chip_top_runner():
     defines[f"PDK_{pdk.replace('-','_')}"] = True
     defines[f"SCL_{scl}"] = True
     defines[f"PAD_{pad}"] = True
-    defines[f"SRAM_{sram}"] = True
+    defines[f"SRAM_{sram}"] = False
 
     if gl:
         # SCL models
@@ -111,11 +335,19 @@ def chip_top_runner():
 
         # We use the powered netlist
         sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")
+        sources.append(proj_path / f"../librelane/build/contador/pnl/contador.pnl.v")
+        
+        print(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / f"{scl}.v","==================")
+        
+        
+        
+        
 
         defines.update({"FUNCTIONAL": True, "USE_POWER_PINS": True})
     else:
         sources.append(proj_path / "../src/chip_top.sv")
         sources.append(proj_path / "../src/chip_core.sv")
+        sources.append(proj_path / "../src/contador/contador.v")
 
     sources += [
         # IO pad models
@@ -130,7 +362,13 @@ def chip_top_runner():
         proj_path / "../ip/gf180mcu_ws_ip__qrcode_id/vh/gf180mcu_ws_ip__qrcode_id.v",
         proj_path / "../ip/gf180mcu_ws_ip__shuttle_id/vh/gf180mcu_ws_ip__shuttle_id.v",
         proj_path / "../ip/gf180mcu_ws_ip__project_id/vh/gf180mcu_ws_ip__project_id.v",
+        proj_path / "../ip/analog_connect/analog_connect.vh",
         
+        #Logods el laboratorio
+        proj_path / "../librelane/build/capibara/capibara.vh",
+        proj_path / "../librelane/build/cic/cic.vh",
+        proj_path / "../librelane/build/ipn_logo/ipn_logo.v"
+
     ]
 
     build_args = []
@@ -141,7 +379,7 @@ def chip_top_runner():
         pass
 
     if sim == "verilator":
-        build_args = ["--timing", "--trace", "--trace-fst", "--trace-structs"]
+        build_args = ["--timing", "--trace", "--trace-fst", "--trace-structs", "--DUSE_POWER_PINS"]
 
     runner = get_runner(sim)
     runner.build(
@@ -151,7 +389,7 @@ def chip_top_runner():
         always=True,
         includes=includes,
         build_args=build_args,
-        waves=True,
+        waves=True
     )
 
     plusargs = []
@@ -160,7 +398,7 @@ def chip_top_runner():
         hdl_toplevel=hdl_toplevel,
         test_module="chip_top_tb,",
         plusargs=plusargs,
-        waves=True,
+        waves=True
     )
 
 

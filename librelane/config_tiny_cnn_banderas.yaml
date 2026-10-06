@@ -1,0 +1,307 @@
+
+meta:
+  version: 3
+  flow: Classic
+
+DESIGN_NAME: tiny_cnn_accelerator
+
+USE_SLANG: true
+
+VERILOG_FILES:
+  - dir::../src/tiny_cnn/arithmetic/argmax.sv
+  - dir::../src/tiny_cnn/arithmetic/maxpool2x2.sv
+  - dir::../src/tiny_cnn/arithmetic/requantize_saturate.sv
+  - dir::../src/tiny_cnn/arithmetic/relu.sv
+  - dir::../src/tiny_cnn/controller/cnn_controller.sv
+  - dir::../src/tiny_cnn/conv/address_generator.sv
+  - dir::../src/tiny_cnn/conv/convolution_engine.sv
+  - dir::../src/tiny_cnn/layers/fully_connected.sv
+  - dir::../src/tiny_cnn/layers/global_avg_pool.sv
+  - dir::../src/tiny_cnn/layers/maxpool_layer.sv
+  - dir::../src/tiny_cnn/mac/exact_mac.sv
+  - dir::../src/tiny_cnn/mac/mac_unit.sv
+  - dir::../src/tiny_cnn/memory/bias_rom.sv
+  - dir::../src/tiny_cnn/memory/sync_ram.sv
+  - dir::../src/tiny_cnn/memory/weight_rom.sv
+  - dir::../src/tiny_cnn/top/tiny_cnn_accelerator.sv
+
+# Reloj
+CLOCK_PORT: clk
+CLOCK_PERIOD: 50
+#PNR_SDC_FILE: "dir::contador.sdc"
+
+# Orden de pines del macro
+#IO_PIN_ORDER_CFG: "dir::../src/pin_conta.cfg"
+
+# Floorplan automático: evita fijar un DIE_AREA de 100 x 100 um
+DIE_AREA: [0, 0, 1100, 1100]
+#[0, 0, 1300, 1300]
+
+FP_SIZING: absolute
+
+MAX_FANOUT_CONSTRAINT: 6
+
+# Alimentación
+VDD_NETS:
+  - VDD
+
+GND_NETS:
+  - VSS
+
+# Para un macro pequeño:
+# - solo rails de alimentación
+# - sin anillo de potencia
+# - sin malla PDN en capas superiores
+PDN_MULTILAYER: true
+FP_PDN_ENABLE_RAILS: true
+FP_PDN_CHECK_NODES: true
+#FP_PDN_VERTICAL_LAYER: Metal4
+#FP_PDN_HORIZONTAL_LAYER: Metal5
+
+FP_PDN_CORE_RING: true
+FP_PDN_CORE_RING_VWIDTH: 10       # Ancho de 20um para soportar alta corriente en los bordes
+FP_PDN_CORE_RING_HWIDTH: 10
+#FP_PDN_CORE_RING_VSPACING: 10      # Separación entre VDD y VSS
+#FP_PDN_CORE_RING_HSPACING: 10
+#FP_PDN_CORE_RING_VOFFSET: 6
+#FP_PDN_CORE_RING_HOFFSET: 6
+
+
+#PDN_CORE_RING_ALLOW_OUT_OF_DIE: false
+IO_PIN_CORNER_AVOIDANCE: 40
+
+PDN_VWIDTH: 10
+PDN_HWIDTH: 10
+PDN_VSPACING: 2
+PDN_HSPACING: 2
+
+#PDN_VPITCH: 20
+#PDN_HPITCH: 20
+
+
+# Metal1 queda principalmente para rails/celdas.
+# El contador es suficientemente pequeño para rutear señales en Metal2-Metal4.
+
+RT_MIN_LAYER: Metal2
+
+RT_MAX_LAYER: Metal5 #originalmente estaba en 4 y en false el pdn multilayer
+
+
+SIGNAL_WIRE_RC_LAYERS: [Metal2, Metal3, Metal4, Metal5]
+
+# El reloj viaja en las capas más altas y limpias
+CLOCK_WIRE_RC_LAYERS: [Metal3, Metal4]
+RT_CLOCK_MIN_LAYER: Metal3
+RT_CLOCK_MAX_LAYER: Metal4
+# Bloquea al 100% el uso de Metal1 para ruteo intercelda
+GRT_LAYER_ADJUSTMENTS: [1.0, 0.1, 0.0, 0.0, 0.0]
+
+
+GRT_ALLOW_CONGESTION: false
+
+
+SYNTH_STRATEGY: "AREA 3"
+
+#"AREA 3"
+
+CTS_SINK_CLUSTERING_ENABLE: true
+CTS_APPLY_NDR: full
+#root_only
+#none
+#half
+#full
+
+
+#Utilizacion de varios nucleos para dichos procesos
+ROUTING_CORES: 4              # Hilos para el Ruteador Detallado (TritonRoute)
+KLAYOUT_DRC_THREADS: 4
+KLAYOUT_DENSITY_THREADS: 4
+KLAYOUT_XOR_THREADS: 4
+DRT_THREADS: 4
+STA_THREADS: 4
+
+#propiedades de klayout para cambiar colores de ls metales
+KLAYOUT_PROPERTIES: "dir::../gf180mcu_PK.lyp"
+#IO_PIN_V_EXTENSION: 1.5
+#IO_PIN_V_EXTENSION: 1.5
+IO_PIN_H_LENGTH: 2
+IO_PIN_V_LENGTH: 2
+IO_PIN_V_THICKNESS_MULT: 2.5
+IO_PIN_H_THICKNESS_MULT: 2.5
+
+# =============================================================================
+# BANDERAS AGREGADAS DESDE con32_one_instruction_macro.yaml
+# Solo se agregan variables que NO estaban activas en config_tiny_cnn.yaml.
+# Las variables que ya existían conservan sus valores originales.
+#la segunda senccion del curso
+# =============================================================================
+
+PL_TIMING_DRIVEN: true
+
+PL_KEEP_RESIZE_BELOW_OVERFLOW: 1
+
+#PL_WIRE_LENGTH_COEF: 0.05
+
+#SYNTH_CORNER: max_ss_125C_3v00
+#
+#RSZ_CORNERS:
+#  - max_ff_n40C_3v60
+#  - max_ss_125C_3v00
+#  - max_ss_125C_3v00
+#  - min_ff_n40C_3v60
+#  - min_ss_125C_3v00 
+#  - min_tt_025C_3v30
+#  - nom_ff_n40C_3v60
+#  - nom_ss_125C_3v00
+#  - nom_tt_025C_3v30
+
+#------------------------------------------------------------------------------
+#Limitación del largo de las conexiones
+#------------------------------------------------------------------------------
+#DESIGN_REPAIR_MAX_WIRE_LENGTH: 400
+#GRT_DESIGN_REPAIR_MAX_WIRE_LENGTH: 400
+
+
+
+# -----------------------------------------------------------------------------
+# RELOJ / CORNERS / STA
+# -----------------------------------------------------------------------------
+
+DEDUPLICATE_CORNERS: true
+MAX_TRANSITION_CONSTRAINT: 2.5
+MAX_CAPACITANCE_CONSTRAINT: 0.2
+STA_MAX_VIOLATOR_COUNT: 200
+
+# -----------------------------------------------------------------------------
+# ETAPAS DE REPARACIÓN / RESIZER
+# -----------------------------------------------------------------------------
+RUN_POST_CTS_RESIZER_TIMING: true
+RUN_POST_GPL_DESIGN_REPAIR: true
+RUN_POST_GRT_DESIGN_REPAIR: true
+RUN_POST_GRT_RESIZER_TIMING: true
+
+# -----------------------------------------------------------------------------
+# GLOBAL ROUTING
+# -----------------------------------------------------------------------------
+GRT_ADJUSTMENT: 0.15
+
+# -----------------------------------------------------------------------------
+# LÍMITES DE INSERCIÓN DE BUFFERS
+# -----------------------------------------------------------------------------
+PL_RESIZER_HOLD_MAX_BUFFER_PCT: 50 #50
+PL_RESIZER_SETUP_MAX_BUFFER_PCT: 50 #50
+GRT_RESIZER_HOLD_MAX_BUFFER_PCT: 50 #50
+GRT_RESIZER_SETUP_MAX_BUFFER_PCT: 50 #50
+PL_RESIZER_SETUP_BUFFERING: true
+GRT_RESIZER_SETUP_BUFFERING: true
+PL_RESIZER_SETUP_BUFFER_REMOVAL: true
+GRT_RESIZER_SETUP_BUFFER_REMOVAL: true
+PL_RESIZER_SETUP_MAX_UTIL_PCT: 95
+GRT_RESIZER_SETUP_MAX_UTIL_PCT: 95
+
+
+
+# -----------------------------------------------------------------------------
+# CLONACIÓN / OPTIMIZACIÓN DE CELDAS
+# -----------------------------------------------------------------------------
+PL_RESIZER_SETUP_GATE_CLONING: true
+GRT_RESIZER_SETUP_GATE_CLONING: true
+PL_RESIZER_GATE_CLONING: true
+PL_OPTIMIZE_MIRRORING: true
+
+# -----------------------------------------------------------------------------
+# REPARACIÓN DE PUERTOS / BUFFERING / SIZING DE SÍNTESIS
+# -----------------------------------------------------------------------------
+DESIGN_REPAIR_BUFFER_INPUT_PORTS: true
+DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: true
+SYNTH_BUFFERING: true
+SYNTH_SIZING: true
+SYNTH_DIRECT_WIRE_BUFFERING: true
+
+# -----------------------------------------------------------------------------
+# MÁRGENES DE SETUP / HOLD
+# -----------------------------------------------------------------------------
+PL_RESIZER_SETUP_SLACK_MARGIN: 0.05 #0.05   el que coloque: 0.1
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.1
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.05 #0.05       el que coloque: 0.025
+GRT_RESIZER_SETUP_SLACK_MARGIN: 0.025 #0.025   el que coloque: 0.1
+
+# -----------------------------------------------------------------------------
+# PORCENTAJE DE TNS A REPARAR
+# -----------------------------------------------------------------------------
+PL_RESIZER_SETUP_REPAIR_TNS_PCT: 100
+GRT_RESIZER_SETUP_REPAIR_TNS_PCT: 100
+PL_RESIZER_HOLD_REPAIR_TNS_PCT: 100
+GRT_RESIZER_HOLD_REPAIR_TNS_PCT: 100
+
+# -----------------------------------------------------------------------------
+# REPARACIÓN DE WIRE LENGTH / SLEW / CAPACITANCIA
+# -----------------------------------------------------------------------------
+#DESIGN_REPAIR_MAX_WIRE_LENGTH: 500
+DESIGN_REPAIR_MAX_SLEW_PCT: 30
+GRT_DESIGN_REPAIR_MAX_SLEW_PCT: 30
+DESIGN_REPAIR_MAX_CAP_PCT: 50
+GRT_DESIGN_REPAIR_MAX_CAP_PCT: 50
+
+# -----------------------------------------------------------------------------
+# POLÍTICA DE REPARACIÓN DE SETUP
+# -----------------------------------------------------------------------------
+PL_RESIZER_ALLOW_SETUP_VIOS: false
+GRT_RESIZER_ALLOW_SETUP_VIOS: false
+# -----------------------------------------------------------------------------
+# ANTENNA / DIODOS
+# -----------------------------------------------------------------------------
+RUN_ANTENNA_REPAIR: true
+GRT_ANTENNA_REPAIR_ITERS: 10
+GRT_ANTENNA_REPAIR_MARGIN: 25
+DRT_ANTENNA_REPAIR_ITERS: 10
+DRT_ANTENNA_REPAIR_MARGIN: 25
+RUN_HEURISTIC_DIODE_INSERTION: false
+
+# -----------------------------------------------------------------------------
+# KLAYOUT / SIGNOFF
+# -----------------------------------------------------------------------------
+KLAYOUT_DRC_OPTIONS:
+  decks: "all,-antenna,-density,-cup"
+  variant: ref::$PDK
+  workers: 4
+
+KLAYOUT_DENSITY_OPTIONS:
+  decks: "density"
+  variant: ref::$PDK
+  workers: 4
+
+KLAYOUT_ANTENNA_OPTIONS:
+  decks: "antenna"
+  variant: ref::$PDK
+  workers: 4
+
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# -----------------------------------------------------------------------------
+# PLACEMENT / PADDING
+# -----------------------------------------------------------------------------
+#GPL_CELL_PADDING: 1
+#DPL_CELL_PADDING: 1
+
+# -----------------------------------------------------------------------------
+# CTS
+# -----------------------------------------------------------------------------
+CTS_SINK_CLUSTERING_SIZE: 8
+CTS_OBSTRUCTION_AWARE: false
+CTS_BALANCE_LEVELS: true
+CTS_SINK_BUFFER_MAX_CAP_DERATE_PCT: 50
+CTS_DELAY_BUFFER_DERATE_PCT: 100
+
+# -----------------------------------------------------------------------------
+# MÁRGENES DEL FLOORPLAN
+# -----------------------------------------------------------------------------
+TOP_MARGIN_MULT: 4
+BOTTOM_MARGIN_MULT: 4
+LEFT_MARGIN_MULT: 12
+RIGHT_MARGIN_MULT: 12
+
+# -----------------------------------------------------------------------------
+# I/O PIN ORDER
+# -----------------------------------------------------------------------------
+# IO_PIN_ORDER_CFG: "dir::../src/pin_tiny_cnn.cfg"

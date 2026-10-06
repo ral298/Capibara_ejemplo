@@ -1,0 +1,137 @@
+
+meta:
+  version: 3
+  flow: Classic
+
+DESIGN_NAME: tiny_cnn_accelerator
+
+USE_SLANG: true
+
+VERILOG_FILES:
+  - dir::../src/tiny_cnn/arithmetic/argmax.sv
+  - dir::../src/tiny_cnn/arithmetic/maxpool2x2.sv
+  - dir::../src/tiny_cnn/arithmetic/requantize_saturate.sv
+  - dir::../src/tiny_cnn/arithmetic/relu.sv
+  - dir::../src/tiny_cnn/controller/cnn_controller.sv
+  - dir::../src/tiny_cnn/conv/address_generator.sv
+  - dir::../src/tiny_cnn/conv/convolution_engine.sv
+  - dir::../src/tiny_cnn/layers/fully_connected.sv
+  - dir::../src/tiny_cnn/layers/global_avg_pool.sv
+  - dir::../src/tiny_cnn/layers/maxpool_layer.sv
+  - dir::../src/tiny_cnn/mac/exact_mac.sv
+  - dir::../src/tiny_cnn/mac/mac_unit.sv
+  - dir::../src/tiny_cnn/memory/bias_rom.sv
+  - dir::../src/tiny_cnn/memory/sync_ram.sv
+  - dir::../src/tiny_cnn/memory/weight_rom.sv
+  - dir::../src/tiny_cnn/top/tiny_cnn_accelerator.sv
+
+# Reloj
+CLOCK_PORT: clk
+CLOCK_PERIOD: 50
+#PNR_SDC_FILE: "dir::contador.sdc"
+
+# Orden de pines del macro
+#IO_PIN_ORDER_CFG: "dir::../src/pin_conta.cfg"
+
+# Floorplan automático: evita fijar un DIE_AREA de 100 x 100 um
+DIE_AREA: [0, 0, 1300, 1300]
+
+FP_SIZING: absolute
+
+MAX_FANOUT_CONSTRAINT: 4
+
+# Alimentación
+VDD_NETS:
+  - VDD
+
+GND_NETS:
+  - VSS
+
+# Para un macro pequeño:
+# - solo rails de alimentación
+# - sin anillo de potencia
+# - sin malla PDN en capas superiores
+PDN_MULTILAYER: true
+FP_PDN_ENABLE_RAILS: true
+FP_PDN_CHECK_NODES: true
+#FP_PDN_VERTICAL_LAYER: Metal4
+#FP_PDN_HORIZONTAL_LAYER: Metal5
+
+FP_PDN_CORE_RING: true
+FP_PDN_CORE_RING_VWIDTH: 2       # Ancho de 20um para soportar alta corriente en los bordes
+FP_PDN_CORE_RING_HWIDTH: 2
+FP_PDN_CORE_RING_VSPACING: 1      # Separación entre VDD y VSS
+FP_PDN_CORE_RING_HSPACING: 1
+PDN_VWIDTH: 2
+PDN_HWIDTH: 2
+PDN_VSPACING: 2
+PDN_HSPACING: 2
+
+PDN_VPITCH: 20
+
+PDN_HPITCH: 20
+
+
+# Metal1 queda principalmente para rails/celdas.
+# El contador es suficientemente pequeño para rutear señales en Metal2-Metal4.
+
+RT_MIN_LAYER: Metal2
+
+RT_MAX_LAYER: Metal5 #originalmente estaba en 4 y en false el pdn multilayer
+
+
+SIGNAL_WIRE_RC_LAYERS: [Metal2, Metal3, Metal4, Metal5]
+
+# El reloj viaja en las capas más altas y limpias
+CLOCK_WIRE_RC_LAYERS: [Metal3, Metal4]
+RT_CLOCK_MIN_LAYER: Metal3
+RT_CLOCK_MAX_LAYER: Metal4
+# Bloquea al 100% el uso de Metal1 para ruteo intercelda
+GRT_LAYER_ADJUSTMENTS: [1.0, 0.1, 0.0, 0.0, 0.0]
+
+
+GRT_ALLOW_CONGESTION: false
+
+
+SYNTH_STRATEGY: "AREA 3"
+
+#"AREA 3"
+
+CTS_SINK_CLUSTERING_ENABLE: true
+CTS_APPLY_NDR: full
+
+
+#Utilizacion de varios nucleos para dichos procesos
+ROUTING_CORES: 4              # Hilos para el Ruteador Detallado (TritonRoute)
+KLAYOUT_DRC_THREADS: 4
+KLAYOUT_DENSITY_THREADS: 4
+KLAYOUT_XOR_THREADS: 4
+DRT_THREADS: 4
+STA_THREADS: 4
+
+#propiedades de klayout para cambiar colores de ls metales
+KLAYOUT_PROPERTIES: "dir::../gf180mcu_PK.lyp"
+#IO_PIN_V_EXTENSION: 1.5
+#IO_PIN_V_EXTENSION: 1.5
+IO_PIN_H_LENGTH: 2
+IO_PIN_V_LENGTH: 2
+IO_PIN_V_THICKNESS_MULT: 2.5
+IO_PIN_H_THICKNESS_MULT: 2.5
+
+
+KLAYOUT_DRC_OPTIONS:
+  decks: "all,-antenna,-density,-cup"
+  variant: ref::$PDK
+  workers: 4
+
+KLAYOUT_DENSITY_OPTIONS:
+  decks: "density"
+  variant: ref::$PDK
+  workers: 4
+
+KLAYOUT_ANTENNA_OPTIONS:
+  decks: "antenna"
+  variant: ref::$PDK
+  workers: 4
+
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout

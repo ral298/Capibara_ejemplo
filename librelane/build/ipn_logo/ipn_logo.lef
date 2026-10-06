@@ -1,0 +1,19 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO ipn_logo
+  CLASS BLOCK ;
+  FOREIGN ipn_logo ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 329.3 BY 453.9 ;
+  SYMMETRY X Y ;
+
+  OBS
+    LAYER Metal5 ;
+      RECT 0.000 0.000 329.3 453.9 ;
+  END
+
+END ipn_logo
+
+END LIBRARY
