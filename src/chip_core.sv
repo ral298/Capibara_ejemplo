@@ -51,16 +51,13 @@ module chip_core #(
     //suma_resta tiene que ser bidir_in[1]
     //resultado_contador tiene que ser la variable "resultado" de la instancia
 
-
-
-
-
-
-
-
-
-
-
+    contador contador_u (
+        .reloj      (clk),
+        .reset      (rst_n),
+        .enable     (bidir_in[0]),
+        .suma_resta (bidir_in[1]),
+        .resultado  (resultado_contador)
+    );
 
     /*(* keep *)
     D14_topcell D14_topcell_u(
@@ -78,40 +75,29 @@ module chip_core #(
     //Configurar bidir_out, que resultado_contador tiene que estar en los bits 5:2
     // usar assign
 
-
-
-
-
-
-
-
-
+    assign bidir_out = {
+        {(NUM_BIDIR_PADS-6){1'b0}},
+        resultado_contador,
+        2'b00
+    };
     //Configurar bidir_oe, que resultado_contador tiene que estar en los bits 5:2 como salidas y las entradas para los bits 1:0
     // usar assign
-
-
-
-
-
-
-
-
-
-
-
-
+    assign bidir_oe = {
+        {(NUM_BIDIR_PADS-6){1'b0}},
+        4'b1111,
+        2'b00
+    };
     //Configurar bidir_ie, que resultado_contador tiene que estar en los bits 5:2 como salidas y las entradas para los bits 1:0
     // usar assign
-
-
-
-
-
-
-
-
+    assign bidir_ie = {
+        {(NUM_BIDIR_PADS-6){1'b0}},
+        ~bidir_oe[5:0]
+    };
     //usar bidir_cs, bidir_sl, bidir_pu, bidir_pd todo en 0, se explicara| el porque
-
+    assign bidir_cs = '0;
+    assign bidir_sl = '0;
+    assign bidir_pu = '0;
+    assign bidir_pd = '0;
 
 
 

@@ -185,17 +185,17 @@ STA_THREADS: 4
 KLAYOUT_DRC_OPTIONS:
   decks: "all,-antenna,-density,-cup" # disable CUP for now
   variant: ref::$PDK
-  workers: 4
+  workers: 10
 
 KLAYOUT_DENSITY_OPTIONS:
   decks: "density"
   variant: ref::$PDK
-  workers: 4
+  workers: 10
 
 KLAYOUT_ANTENNA_OPTIONS:
   decks: "antenna"
   variant: ref::$PDK
-  workers: 4
+  workers: 10
 
 
 KLAYOUT_PROPERTIES: "dir::../gf180mcu_PK.lyp"
