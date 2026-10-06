@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1791263463" />
-    <testcase name="test_contador" classname="test" file="/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/test.py" lineno="31" time="0.0066492557525634766" sim_time_ns="452.0" ratio_time="67977.53264728028" />
+    <property name="random_seed" value="1791316914" />
+    <testcase name="test_contador" classname="test" file="/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/test.py" lineno="31" time="0.012968063354492188" sim_time_ns="532.0" ratio_time="41023.85880276511" />
   </testsuite>
 </testsuites>

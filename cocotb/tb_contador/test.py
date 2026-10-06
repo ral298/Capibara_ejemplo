@@ -49,8 +49,10 @@ async def test_contador(dut):
     # ---------------------------------------------------------
     # RESET
     # ---------------------------------------------------------
-    await comprobar_salida(dut, 0, "RESET ciclo 1")
-    await comprobar_salida(dut, 0, "RESET ciclo 2")
+    for i in range(10):
+
+        await comprobar_salida(dut, 0, "RESET ciclo "+str(i))
+    
 
     # Liberar reset
     dut.rst.value = 1

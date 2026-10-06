@@ -1,4 +1,3 @@
-
 `timescale 1ns / 1ps
 
 module tb ();
@@ -19,9 +18,21 @@ module tb ();
     contador user_project (
         .reloj         (clk),
         .reset          (rst),
-        .enable 		(enable),
-        .suma_resta 	(suma_resta),
-        .resultado	(suma_out)
+        .enable         (enable),
+        .suma_resta     (suma_resta),
+        .resultado      (suma_out)
     );
+
+`ifdef TIMING
+    initial begin
+        $display("============================================");
+        $display(" Simulacion Gate-Level con anotacion SDF");
+        $display(" SDF: %s", `SDF_FILE);
+        $display(" DUT: tb.user_project");
+        $display("============================================");
+
+        $sdf_annotate(`SDF_FILE, user_project);
+    end
+`endif
 
 endmodule

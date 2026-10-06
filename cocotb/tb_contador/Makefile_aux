@@ -3,21 +3,12 @@
 # ==============================================================================
 
 # Simulador por defecto y lenguaje
-SIM ?= icarus
-#SIM ?= cvc
+#SIM ?= icarus
+SIM ?= cvc
 
 TOPLEVEL_LANG ?= verilog
 
 TOP_PROJECT=contador
-
-# ------------------------------------------------------------------------------
-# Forzar recompilación de la simulación una sola vez por comando `make`.
-# Cocotb invoca un segundo make internamente; MAKELEVEL evita borrar allí.
-# ------------------------------------------------------------------------------
-ifeq ($(MAKELEVEL),0)
-$(info Eliminando sim_build anterior...)
-$(shell rm -rf $(PWD)/sim_build/)
-endif
 
 
 # Dirección de tus archivos fuentes lógicos
@@ -57,47 +48,24 @@ else
 # Configuración para Simulación Gate-Level (GL / Post-Síntesis)
 # ------------------------------------------------------------------------------
 SIM_BUILD        = sim_build/gl
-
-# ------------------------------------------------------------------------------
-# Defines compatibles con el simulador seleccionado
-# ------------------------------------------------------------------------------
-ifeq ($(SIM),cvc)
-COMPILE_ARGS    += +define+GL_TEST
-COMPILE_ARGS    += +define+USE_POWER_PINS
-COMPILE_ARGS    += +define+SIM
-else
 COMPILE_ARGS    += -DGL_TEST
 COMPILE_ARGS    += -DUSE_POWER_PINS
 COMPILE_ARGS    += -DSIM
-endif
 
 # Si TIMING=yes, usar el SDF generado por LibreLane.
 # Si TIMING no está habilitado, conservar la simulación GL funcional original.
 ifeq ($(TIMING),yes)
-
-ifeq ($(SIM),cvc)
-COMPILE_ARGS    += +define+TIMING
-COMPILE_ARGS    += +define+SDF_FILE=\"$(SDF_FILE)\"
-else
 COMPILE_ARGS    += -DTIMING
 COMPILE_ARGS    += -DSDF_FILE=\"$(SDF_FILE)\"
 COMPILE_ARGS    += -gspecify
 COMPILE_ARGS    += -ginterconnect
-endif
 
 $(info SDF_CORNER = $(SDF_CORNER))
 $(info SDF_FILE = $(SDF_FILE))
 
 else
-
-ifeq ($(SIM),cvc)
-COMPILE_ARGS    += +define+FUNCTIONAL
-COMPILE_ARGS    += +define+UNIT_DELAY=\#1
-else
 COMPILE_ARGS    += -DFUNCTIONAL
 COMPILE_ARGS    += -DUNIT_DELAY=\#1
-endif
-
 endif
 
 # Modelos del PDK correspondientes a tu entorno de la fundición
@@ -110,11 +78,7 @@ VERILOG_SOURCES += $(PWD)/tb_gls.v
 endif
 
 # Permitir compartir configuraciones vía `include` si es necesario
-ifeq ($(SIM),cvc)
-COMPILE_ARGS    += +incdir+$(SRC_DIR)
-else
 COMPILE_ARGS    += -I$(SRC_DIR)
-endif
 
 # Incluir el archivo de testbench puente (el que tiene el dumper de ondas)
 

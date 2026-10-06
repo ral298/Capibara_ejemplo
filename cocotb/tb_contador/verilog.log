@@ -1,0 +1,288 @@
+OSS_CVC_7.00b-x86_64-rhel6x of 07/07/14 (Linux-elf).
+Copyright (c) 1991-2014 Tachyon Design Automation Corp.
+  All Rights reserved.  Licensed software subject to prohibitions and
+  restrictions.  See OSS CVC artistic license included with release.
+Today is Tue Oct  6 13:32:10 2026.
+Elaborating source file "/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../gf180mcu/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/verilog/gf180mcu_as_sc_mcu7t3v3.v"
+Elaborating source file "/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v"
+Elaborating source file "/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/tb_gls.v"
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1010) WARN** [531] PHY_EDGE_ROW_0_Left_17(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1012) WARN** [531] PHY_EDGE_ROW_0_Right_0(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1014) WARN** [531] PHY_EDGE_ROW_10_Left_27(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1016) WARN** [531] PHY_EDGE_ROW_10_Right_10(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1018) WARN** [531] PHY_EDGE_ROW_11_Left_28(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1020) WARN** [531] PHY_EDGE_ROW_11_Right_11(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1022) WARN** [531] PHY_EDGE_ROW_12_Left_29(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1024) WARN** [531] PHY_EDGE_ROW_12_Right_12(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1026) WARN** [531] PHY_EDGE_ROW_13_Left_30(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1028) WARN** [531] PHY_EDGE_ROW_13_Right_13(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1030) WARN** [531] PHY_EDGE_ROW_14_Left_31(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1032) WARN** [531] PHY_EDGE_ROW_14_Right_14(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1034) WARN** [531] PHY_EDGE_ROW_15_Left_32(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1036) WARN** [531] PHY_EDGE_ROW_15_Right_15(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1038) WARN** [531] PHY_EDGE_ROW_16_Left_33(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1040) WARN** [531] PHY_EDGE_ROW_16_Right_16(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1042) WARN** [531] PHY_EDGE_ROW_1_Left_18(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1044) WARN** [531] PHY_EDGE_ROW_1_Right_1(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1046) WARN** [531] PHY_EDGE_ROW_2_Left_19(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1048) WARN** [531] PHY_EDGE_ROW_2_Right_2(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1050) WARN** [531] PHY_EDGE_ROW_3_Left_20(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1052) WARN** [531] PHY_EDGE_ROW_3_Right_3(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1054) WARN** [531] PHY_EDGE_ROW_4_Left_21(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1056) WARN** [531] PHY_EDGE_ROW_4_Right_4(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1058) WARN** [531] PHY_EDGE_ROW_5_Left_22(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1060) WARN** [531] PHY_EDGE_ROW_5_Right_5(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1062) WARN** [531] PHY_EDGE_ROW_6_Left_23(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1064) WARN** [531] PHY_EDGE_ROW_6_Right_6(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1066) WARN** [531] PHY_EDGE_ROW_7_Left_24(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1068) WARN** [531] PHY_EDGE_ROW_7_Right_7(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1070) WARN** [531] PHY_EDGE_ROW_8_Left_25(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1072) WARN** [531] PHY_EDGE_ROW_8_Right_8(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1074) WARN** [531] PHY_EDGE_ROW_9_Left_26(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1076) WARN** [531] PHY_EDGE_ROW_9_Right_9(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1078) WARN** [531] TAP_TAPCELL_ROW_0_34(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1080) WARN** [531] TAP_TAPCELL_ROW_0_35(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1082) WARN** [531] TAP_TAPCELL_ROW_0_36(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1084) WARN** [531] TAP_TAPCELL_ROW_0_37(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1086) WARN** [531] TAP_TAPCELL_ROW_10_56(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1088) WARN** [531] TAP_TAPCELL_ROW_10_57(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1090) WARN** [531] TAP_TAPCELL_ROW_11_58(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1092) WARN** [531] TAP_TAPCELL_ROW_11_59(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1094) WARN** [531] TAP_TAPCELL_ROW_12_60(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1096) WARN** [531] TAP_TAPCELL_ROW_12_61(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1098) WARN** [531] TAP_TAPCELL_ROW_13_62(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1100) WARN** [531] TAP_TAPCELL_ROW_13_63(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1102) WARN** [531] TAP_TAPCELL_ROW_14_64(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1104) WARN** [531] TAP_TAPCELL_ROW_14_65(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1106) WARN** [531] TAP_TAPCELL_ROW_15_66(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1108) WARN** [531] TAP_TAPCELL_ROW_15_67(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1110) WARN** [531] TAP_TAPCELL_ROW_16_68(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1112) WARN** [531] TAP_TAPCELL_ROW_16_69(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1114) WARN** [531] TAP_TAPCELL_ROW_16_70(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1116) WARN** [531] TAP_TAPCELL_ROW_16_71(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1118) WARN** [531] TAP_TAPCELL_ROW_1_38(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1120) WARN** [531] TAP_TAPCELL_ROW_1_39(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1122) WARN** [531] TAP_TAPCELL_ROW_2_40(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1124) WARN** [531] TAP_TAPCELL_ROW_2_41(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1126) WARN** [531] TAP_TAPCELL_ROW_3_42(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1128) WARN** [531] TAP_TAPCELL_ROW_3_43(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1130) WARN** [531] TAP_TAPCELL_ROW_4_44(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1132) WARN** [531] TAP_TAPCELL_ROW_4_45(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1134) WARN** [531] TAP_TAPCELL_ROW_5_46(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1136) WARN** [531] TAP_TAPCELL_ROW_5_47(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1138) WARN** [531] TAP_TAPCELL_ROW_6_48(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1140) WARN** [531] TAP_TAPCELL_ROW_6_49(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1142) WARN** [531] TAP_TAPCELL_ROW_7_50(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1144) WARN** [531] TAP_TAPCELL_ROW_7_51(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1146) WARN** [531] TAP_TAPCELL_ROW_8_52(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1148) WARN** [531] TAP_TAPCELL_ROW_8_53(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1150) WARN** [531] TAP_TAPCELL_ROW_9_54(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/pnl/contador.pnl.v(1152) WARN** [531] TAP_TAPCELL_ROW_9_55(gf180mcu_as_sc_mcu7t3v3__tap_2) explicit connection list fewer ports 2 connected than type's 4
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/tb_gls.v(19) WARN** [531] user_project(contador) explicit connection list fewer ports 5 connected than type's 7
+Highest level modules:
+gf180mcu_as_sc_mcu7t3v3__dlxfp_2
+gf180mcu_as_sc_mcu7t3v3__dlxfn_2
+gf180mcu_as_sc_mcu7t3v3__dlxtp_2
+gf180mcu_as_sc_mcu7t3v3__dlxtn_2
+gf180mcu_as_sc_mcu7t3v3__dfxtp_2
+gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2
+gf180mcu_as_sc_mcu7t3v3__dfxtp_4
+gf180mcu_as_sc_mcu7t3v3__dfxtn_2
+gf180mcu_as_sc_mcu7t3v3__buff_4
+gf180mcu_as_sc_mcu7t3v3__buff_8
+gf180mcu_as_sc_mcu7t3v3__buff_12
+gf180mcu_as_sc_mcu7t3v3__buff_16
+gf180mcu_as_sc_mcu7t3v3__clkbuff_4
+gf180mcu_as_sc_mcu7t3v3__clkbuff_8
+gf180mcu_as_sc_mcu7t3v3__clkbuff_12
+gf180mcu_as_sc_mcu7t3v3__dlybuff_2
+gf180mcu_as_sc_mcu7t3v3__dlybuff_4
+gf180mcu_as_sc_mcu7t3v3__invz_2
+gf180mcu_as_sc_mcu7t3v3__nand2b_4
+gf180mcu_as_sc_mcu7t3v3__nand4_2
+gf180mcu_as_sc_mcu7t3v3__nor2_4
+gf180mcu_as_sc_mcu7t3v3__nor2b_4
+gf180mcu_as_sc_mcu7t3v3__nor3_2
+gf180mcu_as_sc_mcu7t3v3__and2_2
+gf180mcu_as_sc_mcu7t3v3__and2_4
+gf180mcu_as_sc_mcu7t3v3__or2_2
+gf180mcu_as_sc_mcu7t3v3__or2_4
+gf180mcu_as_sc_mcu7t3v3__xnor2_2
+gf180mcu_as_sc_mcu7t3v3__xnor2_4
+gf180mcu_as_sc_mcu7t3v3__xor2_4
+gf180mcu_as_sc_mcu7t3v3__maj3_2
+gf180mcu_as_sc_mcu7t3v3__maj3_4
+gf180mcu_as_sc_mcu7t3v3__aoi21_2
+gf180mcu_as_sc_mcu7t3v3__aoi21_4
+gf180mcu_as_sc_mcu7t3v3__aoi21b_2
+gf180mcu_as_sc_mcu7t3v3__ao21_4
+gf180mcu_as_sc_mcu7t3v3__ao21b_2
+gf180mcu_as_sc_mcu7t3v3__ao21b_4
+gf180mcu_as_sc_mcu7t3v3__aoi22_2
+gf180mcu_as_sc_mcu7t3v3__aoi22_4
+gf180mcu_as_sc_mcu7t3v3__ao22_2
+gf180mcu_as_sc_mcu7t3v3__ao22_4
+gf180mcu_as_sc_mcu7t3v3__aoi31_2
+gf180mcu_as_sc_mcu7t3v3__aoi211_2
+gf180mcu_as_sc_mcu7t3v3__aoi211_4
+gf180mcu_as_sc_mcu7t3v3__ao211_2
+gf180mcu_as_sc_mcu7t3v3__ao211_4
+gf180mcu_as_sc_mcu7t3v3__ao31_2
+gf180mcu_as_sc_mcu7t3v3__ao31_4
+gf180mcu_as_sc_mcu7t3v3__oai21_4
+gf180mcu_as_sc_mcu7t3v3__oa21_2
+gf180mcu_as_sc_mcu7t3v3__oa21_4
+gf180mcu_as_sc_mcu7t3v3__oai211_2
+gf180mcu_as_sc_mcu7t3v3__mux2_2
+gf180mcu_as_sc_mcu7t3v3__mux2_4
+gf180mcu_as_sc_mcu7t3v3__mux4_2
+gf180mcu_as_sc_mcu7t3v3__fill_4
+gf180mcu_as_sc_mcu7t3v3__fill_8
+gf180mcu_as_sc_mcu7t3v3__tiel_4
+gf180mcu_as_sc_mcu7t3v3__diode_2
+gf180mcu_as_sc_mcu7t3v3__hcf_7
+tb
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(9) WARN** [662] (VOLTAGE value missing in rtriple field "typ"
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(11) WARN** [662] (TEMPERATURE value missing in rtriple field "typ"
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(18) WARN** [3106] SDF (INTERCONNECT form source port enable is not an output or inout port of module contador - works because annotated as (PORT form MIPD delay
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(19) WARN** [3106] SDF (INTERCONNECT form source port reloj is not an output or inout port of module contador - works because annotated as (PORT form MIPD delay
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(20) WARN** [3106] SDF (INTERCONNECT form source port reset is not an output or inout port of module contador - works because annotated as (PORT form MIPD delay
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(21) WARN** [3106] SDF (INTERCONNECT form source port suma_resta is not an output or inout port of module contador - works because annotated as (PORT form MIPD delay
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(114) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(115) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(124) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__inv_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(133) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(134) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(143) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(144) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(153) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__inv_6 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(162) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__inv_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(171) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(172) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(181) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(182) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(191) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__inv_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(200) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi21b_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(201) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi21b_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(202) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi21b_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(211) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(212) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(221) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__inv_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(230) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(231) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(240) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nor2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(241) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nor2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(250) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi31_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(251) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi31_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(252) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi31_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(253) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__aoi31_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(262) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__inv_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(271) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(272) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(281) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nor2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(282) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nor2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(291) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nor2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(292) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nor2b_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(301) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand3_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(302) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand3_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(303) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand3_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(312) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(313) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(322) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand3_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(323) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand3_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(324) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand3_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(333) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(334) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(343) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(344) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_4 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(353) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__xor2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(354) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__xor2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(355) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__xor2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(356) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__xor2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(365) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(366) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__nand2_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(375) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__oai21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(376) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__oai21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(377) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__oai21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(386) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__ao21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(387) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__ao21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(388) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__ao21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(397) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__oai21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(398) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__oai21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(399) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__oai21_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(408) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(412) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(412) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(412) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(413) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(413) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(413) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(414) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(414) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(414) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(415) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(415) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(415) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(416) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(417) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(425) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(429) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(429) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(429) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(430) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(430) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(430) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(431) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(431) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(431) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(432) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(432) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(432) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(433) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(434) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(442) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(446) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(446) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(446) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(447) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(447) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(447) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(448) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(448) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(448) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(449) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(449) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(449) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(450) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(451) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(459) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(463) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(463) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(463) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(464) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(464) ERROR** [1396] unable to match (TIMINGCHECK (SETUP in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(464) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (SETUP) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(465) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(465) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(465) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(466) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(466) ERROR** [1396] unable to match (TIMINGCHECK (HOLD in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(466) ERROR** [1391] no module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 timing check matches SDF (TIMINGCHECK (HOLD) - also tried matching $setuphold in Verilog source
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(467) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(468) ERROR** [1396] unable to match (TIMINGCHECK (WIDTH in type gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(476) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(485) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(494) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(503) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(512) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(521) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(530) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+**/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf(539) ERROR** [1387] unable to match (IOPATH in type gf180mcu_as_sc_mcu7t3v3__buff_2 - no specify section
+  **130 SDF errors during $sdf_annotate of "/home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf" context scope tb.user_project
+
+============================================
+ Simulacion Gate-Level con anotacion SDF
+ SDF: /home/ral298/eda/designs/Capibara_ejemplo/cocotb/tb_contador/../../librelane/build/contador/sdf/max_ss_125C_3v00/contador__max_ss_125C_3v00.sdf
+ DUT: tb.user_project
+============================================
+  There were 0 error(s), 79 warning(s), and 1299 inform(s).
