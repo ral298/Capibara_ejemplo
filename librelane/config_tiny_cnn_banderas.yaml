@@ -158,8 +158,8 @@ PL_KEEP_RESIZE_BELOW_OVERFLOW: 1
 #------------------------------------------------------------------------------
 #Limitación del largo de las conexiones
 #------------------------------------------------------------------------------
-#DESIGN_REPAIR_MAX_WIRE_LENGTH: 400
-#GRT_DESIGN_REPAIR_MAX_WIRE_LENGTH: 400
+DESIGN_REPAIR_MAX_WIRE_LENGTH: 400
+GRT_DESIGN_REPAIR_MAX_WIRE_LENGTH: 400
 
 
 
@@ -264,17 +264,17 @@ RUN_HEURISTIC_DIODE_INSERTION: false
 KLAYOUT_DRC_OPTIONS:
   decks: "all,-antenna,-density,-cup"
   variant: ref::$PDK
-  workers: 4
+  workers: 8
 
 KLAYOUT_DENSITY_OPTIONS:
   decks: "density"
   variant: ref::$PDK
-  workers: 4
+  workers: 8
 
 KLAYOUT_ANTENNA_OPTIONS:
   decks: "antenna"
   variant: ref::$PDK
-  workers: 4
+  workers: 8
 
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 

@@ -1,0 +1,18 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO capibara
+  CLASS BLOCK ;
+  FOREIGN capibara 0 0 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 148.960 BY 167.960 ;
+  SYMMETRY X Y ;
+
+  OBS
+    LAYER Metal5 ;
+      RECT 0.000 0.000 148.960 167.960 ;
+  END
+END capibara
+
+END LIBRARY

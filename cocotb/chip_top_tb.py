@@ -75,44 +75,19 @@ async def test_contador(dut):
     # Inicialización
     # reset es ACTIVO EN BAJO
     # ---------------------------------------------------------
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    dut.clk_PAD.value = 0
+    dut.rst_n_PAD.value = 0
+    dut.input_PAD.value = 0
 
     if gl:
         dut.VDD.value = 1
         dut.VSS.value = 0
-    #utilizar la funcion set_bidir_inputs para colocar enable=0 y  suma_resta=1
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    set_bidir_inputs(
+        dut,
+        enable=0,
+        suma_resta=1
+    )
 
     await Timer(1, unit="ns")
 
@@ -143,46 +118,23 @@ async def test_contador(dut):
     # CONTEO ASCENDENTE
     # suma_resta = 1 -> +1
     # ---------------------------------------------------------
-    #Colocar enable=1,suma_resta=1 con set_bidir_inputs
-    
-    
-    
-    
-
-
-
-    
+    set_bidir_inputs(
+        dut,
+        enable=1,
+        suma_resta=1
+    )
 
     dut._log.info("---- CONTEO ASCENDENTE ----")
 
     for esperado in range(1, 16):
-        # hacer que cuente con la funcion comprobar_salida, que vaya comparando con esperado
-        
-
-
-
-
-
-
-
+        await comprobar_salida(dut, esperado, "SUMA")
 
     # 1111 + 0001 -> 0000
-    #sumarle un 1 para que llegue a 0
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+    await comprobar_salida(
+        dut,
+        0,
+        "SUMA con overflow"
+    )
 
     # ---------------------------------------------------------
     # CONTEO DESCENDENTE
@@ -197,18 +149,7 @@ async def test_contador(dut):
     dut._log.info("---- CONTEO DESCENDENTE ----")
 
     for esperado in range(15, -1, -1):
-        #que cuente de manera decendente y haga la comparación con esperado
-
-
-
-
-
-
-
-
-
-
-
+        await comprobar_salida(dut, esperado, "RESTA")
 
     # ---------------------------------------------------------
     # ENABLE = 0 -> HOLD
@@ -218,29 +159,13 @@ async def test_contador(dut):
         enable=0,
         suma_resta=0
     )
-    
+
     for i in range(3):
-        #que intente contar y al no poder contar por enable=0 siempre tiene que esperar un 0
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        await comprobar_salida(
+            dut,
+            0,
+            f"HOLD ciclo {i + 1}"
+        )
 
     # ---------------------------------------------------------
     # Volver a contar antes del reset final
@@ -362,10 +287,10 @@ def chip_top_runner():
         proj_path / "../ip/gf180mcu_ws_ip__qrcode_id/vh/gf180mcu_ws_ip__qrcode_id.v",
         proj_path / "../ip/gf180mcu_ws_ip__shuttle_id/vh/gf180mcu_ws_ip__shuttle_id.v",
         proj_path / "../ip/gf180mcu_ws_ip__project_id/vh/gf180mcu_ws_ip__project_id.v",
-        proj_path / "../ip/analog_connect/analog_connect.vh",
+        #proj_path / "../ip/analog_connect/analog_connect.vh",
         
         #Logods el laboratorio
-        proj_path / "../librelane/build/capibara/capibara.vh",
+        #proj_path / "../librelane/build/capibara/capibara.vh",
         proj_path / "../librelane/build/cic/cic.vh",
         proj_path / "../librelane/build/ipn_logo/ipn_logo.v"
 

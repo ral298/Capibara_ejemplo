@@ -128,20 +128,20 @@ MACROS:
       cic_u:
         location: [3320, 1105]
         orientation: N
-#  capibara:
-#    gds:
-#      - dir::build/capibara/capibara.gds
-#    lef:
-#      - dir::build/capibara/capibara.lef
-#    vh:
-#      - dir::build/capibara/capibara.vh
-#    lib:
-#      "*":
-#        - dir::build/capibara/capibara.lib
-#    instances:
-#      capibara_u:
-#        location: [3320, 925]
-#        orientation: N
+  capibara:
+    gds:
+      - dir::build/capibara/capibara.gds
+    lef:
+      - dir::build/capibara/capibara.lef
+    vh:
+      - dir::build/capibara/capibara.vh
+    lib:
+      "*":
+        - dir::build/capibara/capibara.lib
+    instances:
+      capibara_u:
+        location: [3320, 925]
+        orientation: N
   contador:
     gds:
       - dir::build/contador/gds/contador.gds
@@ -204,101 +204,125 @@ MACROS:
       i_chip_core.contador_u:
         location: [550, 550]
         orientation: N
-#  D14_topcell:
-#    gds:
-#      - dir::build/D14_topcell/gds/D14_topcell.gds
-#    lef:
-#      - dir::build/D14_topcell/lef/D14_topcell.lef
-#    vh:
-#      - dir::build/D14_topcell/vh/D14_topcell.vh
-#    nl:
-#      - dir::build/D14_topcell/nl/D14_topcell.nl.v
-#    pnl:
-#      - dir::build/D14_topcell/pnl/D14_topcell.pnl.v
-#    spice:
-#      - dir::build/D14_topcell/spice/D14_topcell.spice
-#    sdf:
-#      max_ff_n40C_5v50:
-#        - dir::build/D14_topcell/sdf/max_ff_n40C_5v50/D14_topcell__max_ff_n40C_5v50.sdf
-#      max_ss_125C_4v50:
-#        - dir::build/D14_topcell/sdf/max_ss_125C_4v50/D14_topcell__max_ss_125C_4v50.sdf
-#      max_tt_025C_5v00:
-#        - dir::build/D14_topcell/sdf/max_tt_025C_5v00/D14_topcell__max_tt_025C_5v00.sdf
-#      min_ff_n40C_5v50:
-#        - dir::build/D14_topcell/sdf/min_ff_n40C_5v50/D14_topcell__min_ff_n40C_5v50.sdf
-#      min_ss_125C_4v50:
-#        - dir::build/D14_topcell/sdf/min_ss_125C_4v50/D14_topcell__min_ss_125C_4v50.sdf
-#      min_tt_025C_5v00:
-#        - dir::build/D14_topcell/sdf/min_tt_025C_5v00/D14_topcell__min_tt_025C_5v00.sdf
-#      nom_ff_n40C_5v50:
-#        - dir::build/D14_topcell/sdf/nom_ff_n40C_5v50/D14_topcell__nom_ff_n40C_5v50.sdf
-#      nom_ss_125C_4v50:
-#        - dir::build/D14_topcell/sdf/nom_ss_125C_4v50/D14_topcell__nom_ss_125C_4v50.sdf
-#      nom_tt_025C_5v00:
-#        - dir::build/D14_topcell/sdf/nom_tt_025C_5v00/D14_topcell__nom_tt_025C_5v00.sdf
-#    lib:
-#      max_ff_n40C_5v50:
-#        - dir::build/D14_topcell/lib/max_ff_n40C_5v50/D14_topcell__max_ff_n40C_5v50.lib
-#      max_ss_125C_4v50:
-#        - dir::build/D14_topcell/lib/max_ss_125C_4v50/D14_topcell__max_ss_125C_4v50.lib
-#      max_tt_025C_5v00:
-#        - dir::build/D14_topcell/lib/max_tt_025C_5v00/D14_topcell__max_tt_025C_5v00.lib
-#      min_ff_n40C_5v50:
-#        - dir::build/D14_topcell/lib/min_ff_n40C_5v50/D14_topcell__min_ff_n40C_5v50.lib
-#      min_ss_125C_4v50:
-#        - dir::build/D14_topcell/lib/min_ss_125C_4v50/D14_topcell__min_ss_125C_4v50.lib
-#      min_tt_025C_5v00:
-#        - dir::build/D14_topcell/lib/min_tt_025C_5v00/D14_topcell__min_tt_025C_5v00.lib
-#      nom_ff_n40C_5v50:
-#        - dir::build/D14_topcell/lib/nom_ff_n40C_5v50/D14_topcell__nom_ff_n40C_5v50.lib
-#      nom_ss_125C_4v50:
-#        - dir::build/D14_topcell/lib/nom_ss_125C_4v50/D14_topcell__nom_ss_125C_4v50.lib
-#      nom_tt_025C_5v00:
-#        - dir::build/D14_topcell/lib/nom_tt_025C_5v00/D14_topcell__nom_tt_025C_5v00.lib
-#    spef:
-#      max:
-#        - dir::build/D14_topcell/spef/max/D14_topcell.max.spef
-#      min:
-#        - dir::build/D14_topcell/spef/min/D14_topcell.min.spef
-#      nom:
-#        - dir::build/D14_topcell/spef/nom/D14_topcell.nom.spef
-#    instances:
-#      i_chip_core.D14_topcell_u:
-#        location: [3000, 490]
-#        orientation: N
-#  analog_connect:
-#    gds:
-#      - dir::../ip/analog_connect/analog_connect.gds
-#    lef:
-#      - dir::../ip/analog_connect/analog_connect.lef
-#    vh:
-#      - dir::../ip/analog_connect/analog_connect.vh
-#    instances:
-#      analog[0].connect:
-#        location: [3555.0, 749.84]
-#        orientation: W
-#      analog[8].connect:
-#        location: [3427.34,2154.0]
-#        orientation: S
+  D14_topcell:
+    gds:
+      - dir::build/D14_topcell/gds/D14_topcell.gds
+    lef:
+      - dir::build/D14_topcell/lef/D14_topcell.lef
+    vh:
+      - dir::build/D14_topcell/vh/D14_topcell.vh
+    nl:
+      - dir::build/D14_topcell/nl/D14_topcell.nl.v
+    pnl:
+      - dir::build/D14_topcell/pnl/D14_topcell.pnl.v
+    spice:
+      - dir::build/D14_topcell/spice/D14_topcell.spice
+    sdf:
+      max_ff_n40C_5v50:
+        - dir::build/D14_topcell/sdf/max_ff_n40C_5v50/D14_topcell__max_ff_n40C_5v50.sdf
+      max_ss_125C_4v50:
+        - dir::build/D14_topcell/sdf/max_ss_125C_4v50/D14_topcell__max_ss_125C_4v50.sdf
+      max_tt_025C_5v00:
+        - dir::build/D14_topcell/sdf/max_tt_025C_5v00/D14_topcell__max_tt_025C_5v00.sdf
+      min_ff_n40C_5v50:
+        - dir::build/D14_topcell/sdf/min_ff_n40C_5v50/D14_topcell__min_ff_n40C_5v50.sdf
+      min_ss_125C_4v50:
+        - dir::build/D14_topcell/sdf/min_ss_125C_4v50/D14_topcell__min_ss_125C_4v50.sdf
+      min_tt_025C_5v00:
+        - dir::build/D14_topcell/sdf/min_tt_025C_5v00/D14_topcell__min_tt_025C_5v00.sdf
+      nom_ff_n40C_5v50:
+        - dir::build/D14_topcell/sdf/nom_ff_n40C_5v50/D14_topcell__nom_ff_n40C_5v50.sdf
+      nom_ss_125C_4v50:
+        - dir::build/D14_topcell/sdf/nom_ss_125C_4v50/D14_topcell__nom_ss_125C_4v50.sdf
+      nom_tt_025C_5v00:
+        - dir::build/D14_topcell/sdf/nom_tt_025C_5v00/D14_topcell__nom_tt_025C_5v00.sdf
+    lib:
+      max_ff_n40C_5v50:
+        - dir::build/D14_topcell/lib/max_ff_n40C_5v50/D14_topcell__max_ff_n40C_5v50.lib
+      max_ss_125C_4v50:
+        - dir::build/D14_topcell/lib/max_ss_125C_4v50/D14_topcell__max_ss_125C_4v50.lib
+      max_tt_025C_5v00:
+        - dir::build/D14_topcell/lib/max_tt_025C_5v00/D14_topcell__max_tt_025C_5v00.lib
+      min_ff_n40C_5v50:
+        - dir::build/D14_topcell/lib/min_ff_n40C_5v50/D14_topcell__min_ff_n40C_5v50.lib
+      min_ss_125C_4v50:
+        - dir::build/D14_topcell/lib/min_ss_125C_4v50/D14_topcell__min_ss_125C_4v50.lib
+      min_tt_025C_5v00:
+        - dir::build/D14_topcell/lib/min_tt_025C_5v00/D14_topcell__min_tt_025C_5v00.lib
+      nom_ff_n40C_5v50:
+        - dir::build/D14_topcell/lib/nom_ff_n40C_5v50/D14_topcell__nom_ff_n40C_5v50.lib
+      nom_ss_125C_4v50:
+        - dir::build/D14_topcell/lib/nom_ss_125C_4v50/D14_topcell__nom_ss_125C_4v50.lib
+      nom_tt_025C_5v00:
+        - dir::build/D14_topcell/lib/nom_tt_025C_5v00/D14_topcell__nom_tt_025C_5v00.lib
+    spef:
+      max:
+        - dir::build/D14_topcell/spef/max/D14_topcell.max.spef
+      min:
+        - dir::build/D14_topcell/spef/min/D14_topcell.min.spef
+      nom:
+        - dir::build/D14_topcell/spef/nom/D14_topcell.nom.spef
+    instances:
+      i_chip_core.D14_topcell_u:
+        location: [3000, 490]
+        orientation: N
+  analog_connect:
+    gds:
+      - dir::../ip/analog_connect/analog_connect.gds
+    lef:
+      - dir::../ip/analog_connect/analog_connect.lef
+    vh:
+      - dir::../ip/analog_connect/analog_connect.vh
+    instances:
+      analog[0].connect:
+        location: [3555.0, 749.84]
+        orientation: W
+      analog[1].connect:
+        location: [3555.0, 890.84]
+        orientation: W
+      analog[2].connect:
+        location: [3555.0, 1031.84]
+        orientation: W
+      analog[3].connect:
+        location: [3555.0, 1172.84]
+        orientation: W
+      analog[4].connect:
+        location: [3555.0, 1313.84]
+        orientation: W
+      analog[5].connect:
+        location: [3555.0, 1454.84]
+        orientation: W
+      analog[6].connect:
+        location: [3555.0, 1595.84]
+        orientation: W
+      analog[7].connect:
+        location: [3555.0, 1736.84]
+        orientation: W
+      analog[8].connect:
+        location: [3427.34,2154.0]
+        orientation: S
+      analog[9].connect:
+        location: [3298.34,2154.0]
+        orientation: S
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:
 #- "i_chip_core.sram_0 VDD VSS VDD VSS"
 #- "i_chip_core.sram_1 VDD VSS VDD VSS"
 - "i_chip_core.contador_u VDD VSS VDD VSS"
-#- "i_chip_core.D14_topcell_u VDD VSS avdd avss"
+- "i_chip_core.D14_topcell_u VDD VSS avdd avss"
 
 
-#RSZ_DONT_TOUCH_LIST:
-#  - "i_chip_core.D14_topcell_u"
-#  - "analog_CORE[0]"
-#  - "analog_CORE[1]"
-#  - "analog_CORE[2]"
-#  - "analog_CORE[3]"
-#  - "analog_CORE[4]"
-#  - "analog_CORE[5]"
-#  - "analog_CORE[6]"
-#  - "analog_CORE[7]"
+RSZ_DONT_TOUCH_LIST:
+  - "i_chip_core.D14_topcell_u"
+  - "analog_CORE[0]"
+  - "analog_CORE[1]"
+  - "analog_CORE[2]"
+  - "analog_CORE[3]"
+  - "analog_CORE[4]"
+  - "analog_CORE[5]"
+  - "analog_CORE[6]"
+  - "analog_CORE[7]"
 
 #FP_OBSTRUCTIONS:
 #  - [2895, 545, 3350, 1000]

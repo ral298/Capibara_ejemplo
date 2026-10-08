@@ -59,7 +59,7 @@ module chip_core #(
         .resultado  (resultado_contador)
     );
 
-    /*(* keep *)
+    (* keep *)
     D14_topcell D14_topcell_u(
         .Vin        (analog[0]),
         .Vin_neg    (analog[1]),
@@ -69,7 +69,7 @@ module chip_core #(
         .vpre2      (analog[5]),
         .vpost1     (analog[6]),
         .vpost2     (analog[7])
-    );*/
+    );
     
     
     //Configurar bidir_out, que resultado_contador tiene que estar en los bits 5:2
